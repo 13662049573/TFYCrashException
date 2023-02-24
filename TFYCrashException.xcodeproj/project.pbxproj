@@ -118,6 +118,7 @@
 		362CBE1E29A8ACD300085921 /* KVOObjectDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOObjectDemo.m; sourceTree = "<group>"; };
 		362CBE1F29A8ACD300085921 /* KVOObjectDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOObjectDemo.h; sourceTree = "<group>"; };
 		362CBE2029A8ACD300085921 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
+		3680FC4C29A8C82B00A9C5BF /* TFYCrashSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCrashSDK.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +211,7 @@
 		362CBDDE29A8A2C500085921 /* TFYCrashSDK */ = {
 			isa = PBXGroup;
 			children = (
+				3680FC4C29A8C82B00A9C5BF /* TFYCrashSDK.h */,
 				362CBDE129A8A31B00085921 /* TFYARC */,
 				362CBDE329A8A31C00085921 /* TFYDeallocBlock */,
 				362CBDE229A8A31C00085921 /* TFYMain */,
