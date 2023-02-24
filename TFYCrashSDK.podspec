@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   完美处理项目闪退问题，后期会持续更新。
                    DESC
 
-  spec.homepage     = "http://EXAMPLE/TFYCrashSDK"
+  spec.homepage     = "https://github.com/13662049573/TFYCrashException"
   
   spec.license      = "MIT"
   
@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   spec.watchos.deployment_target = "5.0"
   spec.tvos.deployment_target = "11.0"
 
-  spec.source       = { :git => "http://EXAMPLE/TFYCrashSDK.git", :tag => spec.version }
+  spec.source       = { :git => "https://github.com/13662049573/TFYCrashException.git", :tag => spec.version }
 
   spec.default_subspec = 'All'
   spec.subspec 'All' do |ss|
