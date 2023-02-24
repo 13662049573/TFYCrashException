@@ -47,6 +47,7 @@
 
 - (void)handleCrashException:(NSString*)exceptionMessage extraInfo:(NSDictionary*)info{
 
+    NSLog(@"info============:%@================exceptionMessage======:",info,exceptionMessage);
 }
 
 #pragma mark - Action
