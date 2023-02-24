@@ -41,6 +41,6 @@ pod 'TFYCrashSDK'
     [TFYCrashException registerExceptionHandle:self];
 }
 
-- (void)handleCrashException:(NSString*)exceptionMessage exceptionCategory:(JJExceptionGuardCategory)exceptionCategory extraInfo:(nullable NSDictionary*)info{
+- (void)handleCrashException:(NSString*)exceptionMessage exceptionCategory:(TFYCrashExceptionGuardCategory)exceptionCategory extraInfo:(nullable NSDictionary*)info{
 
 }
