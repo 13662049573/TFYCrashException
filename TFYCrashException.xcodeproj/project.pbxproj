@@ -216,7 +216,6 @@
 				362CBDE329A8A31C00085921 /* TFYDeallocBlock */,
 				362CBDE229A8A31C00085921 /* TFYMain */,
 				362CBDDF29A8A31A00085921 /* TFYMRC */,
-				362CBDE029A8A31B00085921 /* TFYSwizzle */,
 			);
 			path = TFYCrashSDK;
 			sourceTree = "<group>";
@@ -238,15 +237,6 @@
 				362CBE0B29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.m */,
 			);
 			path = TFYMRC;
-			sourceTree = "<group>";
-		};
-		362CBDE029A8A31B00085921 /* TFYSwizzle */ = {
-			isa = PBXGroup;
-			children = (
-				362CBE0029A8A39B00085921 /* NSObject+SwizzleHook.h */,
-				362CBDFF29A8A39A00085921 /* NSObject+SwizzleHook.m */,
-			);
-			path = TFYSwizzle;
 			sourceTree = "<group>";
 		};
 		362CBDE129A8A31B00085921 /* TFYARC */ = {
@@ -279,6 +269,8 @@
 				362CBE1529A8A43900085921 /* TFYCrashExceptionProxy.m */,
 				362CBE1729A8A44D00085921 /* TFYCrashException.h */,
 				362CBE1829A8A44D00085921 /* TFYCrashException.m */,
+				362CBE0029A8A39B00085921 /* NSObject+SwizzleHook.h */,
+				362CBDFF29A8A39A00085921 /* NSObject+SwizzleHook.m */,
 				362CBE1A29A8A48500085921 /* TFYCrashExceptionMacros.h */,
 			);
 			path = TFYMain;
@@ -620,7 +612,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QH95759TSS;
+				DEVELOPMENT_TEAM = W27SB687KJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TFYCrashException/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -647,7 +639,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = QH95759TSS;
+				DEVELOPMENT_TEAM = W27SB687KJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TFYCrashException/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -35,14 +35,6 @@ static const char DeallocKVOKey;
 
 @implementation KVOObjectItem
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-
-    }
-    return self;
-}
-
 - (BOOL)isEqual:(KVOObjectItem*)object{
     // check object nil
     if (!self.observer || !self.whichObject || !self.keyPath
@@ -63,7 +55,10 @@ static const char DeallocKVOKey;
     self.observer = nil;
     self.whichObject = nil;
     self.context = nil;
-    self.keyPath = nil;
+    if (self.keyPath) {
+        [self.keyPath release];
+    }
+    [super dealloc];
 }
 
 @end
@@ -131,8 +126,9 @@ static const char DeallocKVOKey;
  release the dispatch_semaphore
  */
 - (void)dealloc{
-    self.kvoObjectSet = nil;
-    self.kvoLock = nil;
+    [self.kvoObjectSet release];
+    dispatch_release(self.kvoLock);
+    [super dealloc];
 }
 
 /// Clean the kvo info and set the item property nil,break the reference
@@ -198,6 +194,7 @@ static const char DeallocKVOKey;
     if (!objectContainer) {
         objectContainer = [KVOObjectContainer new];
         objc_setAssociatedObject(self, &DeallocKVOKey, objectContainer, OBJC_ASSOCIATION_RETAIN);
+        [objectContainer release];
     }
 
     [objectContainer checkAddKVOItemExist:item existResult:^{
@@ -209,9 +206,11 @@ static const char DeallocKVOKey;
     if (!observerContainer) {
         observerContainer = [KVOObjectContainer new];
         objc_setAssociatedObject(observer, &DeallocKVOKey, observerContainer, OBJC_ASSOCIATION_RETAIN);
+        [observerContainer release];
     }
     [observerContainer checkAddKVOItemExist:item existResult:nil];
 
+    [item release];
     // clean the self and observer
     tfy_swizzleDeallocIfNeeded(self.class);
     tfy_swizzleDeallocIfNeeded(observer.class);
@@ -274,8 +273,8 @@ static const char DeallocKVOKey;
          * Fix memory leak,
          * bug link:https://github.com/jezzmemo/TFYCrashException/issues/131
          */
-        targetItem = nil;
-        set = nil;
+        [targetItem release];
+        [set release];
     }];
 }
 
