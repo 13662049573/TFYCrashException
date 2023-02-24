@@ -9,7 +9,7 @@
 #import <objc/message.h>
 
 #import "NSTimer+CleanTimer.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import "TFYCrashExceptionProxy.h"
 
 /**
@@ -65,7 +65,7 @@
 @implementation NSTimer (CleanTimer)
 
 + (void)tfy_swizzleNSTimer{
-    swizzleClassMethod([NSTimer class], @selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:), @selector(hookScheduledTimerWithTimeInterval:target:selector:userInfo:repeats:));
+    tfy_crashswizzleClassMethod([NSTimer class], @selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:), @selector(hookScheduledTimerWithTimeInterval:target:selector:userInfo:repeats:));
 }
 
 + (NSTimer*)hookScheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo{

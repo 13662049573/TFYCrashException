@@ -6,7 +6,7 @@
 //
 
 #import "NSMutableDictionary+MutableDictionaryHook.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import "TFYCrashExceptionProxy.h"
 #import "TFYCrashExceptionMacros.h"
 
@@ -15,9 +15,9 @@ TFYCrashSYNTH_DUMMY_CLASS(NSMutableDictionary_MutableDictionaryHook)
 @implementation NSMutableDictionary (MutableDictionaryHook)
 
 + (void)tfy_swizzleNSMutableDictionary{
-    swizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKey:), @selector(hookSetObject:forKey:));
-    swizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(removeObjectForKey:), @selector(hookRemoveObjectForKey:));
-    swizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKeyedSubscript:), @selector(hookSetObject:forKeyedSubscript:));
+    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKey:), @selector(hookSetObject:forKey:));
+    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(removeObjectForKey:), @selector(hookRemoveObjectForKey:));
+    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKeyedSubscript:), @selector(hookSetObject:forKeyedSubscript:));
 }
 
 - (void) hookSetObject:(id)object forKey:(id)key {

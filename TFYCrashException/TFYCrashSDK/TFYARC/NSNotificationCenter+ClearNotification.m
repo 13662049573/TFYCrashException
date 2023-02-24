@@ -7,7 +7,7 @@
 
 
 #import "NSNotificationCenter+ClearNotification.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import "NSObject+DeallocBlock.h"
 #import "TFYCrashExceptionMacros.h"
 #import <objc/runtime.h>
@@ -17,7 +17,7 @@ TFYCrashSYNTH_DUMMY_CLASS(NSNotificationCenter_ClearNotification)
 @implementation NSNotificationCenter (ClearNotification)
 
 + (void)tfy_swizzleNSNotificationCenter{
-    [self tfy_swizzleInstanceMethod:@selector(addObserver:selector:name:object:) withSwizzledBlock:^id(TFYCrashSwizzleObject *swizzleInfo) {
+    [self tfy_crashswizzleInstanceMethod:@selector(addObserver:selector:name:object:) withSwizzledBlock:^id(TFYCrashSwizzleObject *swizzleInfo) {
         return ^(__unsafe_unretained id self,id observer,SEL aSelector,NSString* aName,id anObject){
             [self processAddObserver:observer selector:aSelector name:aName object:anObject swizzleInfo:swizzleInfo];
         };

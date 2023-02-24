@@ -6,7 +6,7 @@
 //
 
 #import "NSDictionary+DictionaryHook.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import "TFYCrashExceptionProxy.h"
 #import "TFYCrashExceptionMacros.h"
 
@@ -15,8 +15,8 @@ TFYCrashSYNTH_DUMMY_CLASS(NSDictionary_DictionaryHook)
 @implementation NSDictionary (DictionaryHook)
 
 + (void)tfy_swizzleNSDictionary{
-    [NSDictionary tfy_swizzleClassMethod:@selector(dictionaryWithObject:forKey:) withSwizzleMethod:@selector(hookDictionaryWithObject:forKey:)];
-    [NSDictionary tfy_swizzleClassMethod:@selector(dictionaryWithObjects:forKeys:count:) withSwizzleMethod:@selector(hookDictionaryWithObjects:forKeys:count:)];
+    [NSDictionary tfy_crashswizzleClassMethod:@selector(dictionaryWithObject:forKey:) withSwizzleMethod:@selector(hookDictionaryWithObject:forKey:)];
+    [NSDictionary tfy_crashswizzleClassMethod:@selector(dictionaryWithObjects:forKeys:count:) withSwizzleMethod:@selector(hookDictionaryWithObjects:forKeys:count:)];
 }
 
 + (instancetype) hookDictionaryWithObject:(id)object forKey:(id)key

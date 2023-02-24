@@ -1,12 +1,11 @@
 //
-//  NSObject+SwizzleHook.m
+//  NSObject+Hook.m
 //  TFYCrashException
 //
 //  Created by 田风有 on 2023/2/24.
 //
 
-
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <libkern/OSAtomic.h>
@@ -29,7 +28,7 @@ static const char TFYCrashSwizzledDeallocKey;
 
 @end
 
-void swizzleClassMethod(Class cls, SEL originSelector, SEL swizzleSelector){
+__attribute__((overloadable)) void tfy_crashswizzleClassMethod(Class cls, SEL originSelector, SEL swizzleSelector){
     if (!cls) {
         return;
     }
@@ -59,7 +58,7 @@ void swizzleClassMethod(Class cls, SEL originSelector, SEL swizzleSelector){
     }
 }
 
-void swizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzleSelector){
+__attribute__((overloadable)) void tfy_crashswizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzleSelector){
     if (!cls) {
         return;
     }
@@ -92,7 +91,7 @@ void swizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzleSelector){
 }
 
 // a class doesn't need dealloc swizzled if it or a superclass has been swizzled already
-BOOL tfy_requiresDeallocSwizzle(Class class)
+__attribute__((overloadable)) BOOL tfy_crashrequiresDeallocSwizzle(Class class)
 {
     BOOL swizzled = NO;
     
@@ -103,7 +102,7 @@ BOOL tfy_requiresDeallocSwizzle(Class class)
     return !swizzled;
 }
 
-void tfy_swizzleDeallocIfNeeded(Class class)
+__attribute__((overloadable)) void tfy_crashswizzleDeallocIfNeeded(Class class)
 {
     static SEL deallocSEL = NULL;
     static SEL cleanupSEL = NULL;
@@ -115,7 +114,7 @@ void tfy_swizzleDeallocIfNeeded(Class class)
     });
     
     @synchronized (class) {
-        if ( !tfy_requiresDeallocSwizzle(class) ) {
+        if ( !tfy_crashrequiresDeallocSwizzle(class) ) {
             return;
         }
         
@@ -154,7 +153,7 @@ void tfy_swizzleDeallocIfNeeded(Class class)
 }
 
 
-@implementation NSObject (SwizzleHook)
+@implementation NSObject (Hook)
 
 void __TFY_SWIZZLE_BLOCK(Class classToSwizzle,SEL selector,TFYCrashSwizzledIMPBlock impBlock){
     Method method = class_getInstanceMethod(classToSwizzle, selector);
@@ -185,16 +184,17 @@ void __TFY_SWIZZLE_BLOCK(Class classToSwizzle,SEL selector,TFYCrashSwizzledIMPBl
     originalIMP = class_replaceMethod(classToSwizzle, selector, newIMP, methodType);
 }
 
-+ (void)tfy_swizzleClassMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector{
-    swizzleClassMethod(self.class, originSelector, swizzleSelector);
++ (void)tfy_crashswizzleClassMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector{
+    tfy_crashswizzleClassMethod(self.class, originSelector, swizzleSelector);
 }
 
-- (void)tfy_swizzleInstanceMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector{
-    swizzleInstanceMethod(self.class, originSelector, swizzleSelector);
+- (void)tfy_crashswizzleInstanceMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector{
+    tfy_crashswizzleInstanceMethod(self.class, originSelector, swizzleSelector);
 }
 
-- (void)tfy_swizzleInstanceMethod:(SEL)originSelector withSwizzledBlock:(TFYCrashSwizzledIMPBlock)swizzledBlock{
+- (void)tfy_crashswizzleInstanceMethod:(SEL)originSelector withSwizzledBlock:(TFYCrashSwizzledIMPBlock)swizzledBlock{
     __TFY_SWIZZLE_BLOCK(self.class, originSelector, swizzledBlock);
 }
+
 
 @end

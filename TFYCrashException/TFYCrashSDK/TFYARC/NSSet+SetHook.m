@@ -6,7 +6,7 @@
 //
 
 #import "NSSet+SetHook.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import "TFYCrashExceptionProxy.h"
 #import "TFYCrashExceptionMacros.h"
 
@@ -15,7 +15,7 @@ TFYCrashSYNTH_DUMMY_CLASS(NSSet_SetHook)
 @implementation NSSet (SetHook)
 
 + (void)tfy_swizzleNSSet{
-    [NSSet tfy_swizzleClassMethod:@selector(setWithObject:) withSwizzleMethod:@selector(hookSetWithObject:)];
+    [NSSet tfy_crashswizzleClassMethod:@selector(setWithObject:) withSwizzleMethod:@selector(hookSetWithObject:)];
 }
 
 + (instancetype)hookSetWithObject:(id)object{

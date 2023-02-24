@@ -6,7 +6,7 @@
 //
 
 #import "NSAttributedString+AttributedStringHook.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import <objc/runtime.h>
 #import "TFYCrashExceptionProxy.h"
 #import "TFYCrashExceptionMacros.h"
@@ -19,11 +19,11 @@ TFYCrashSYNTH_DUMMY_CLASS(NSAttributedString_AttributedStringHook)
     NSAttributedString* instanceObject = [NSAttributedString new];
     Class cls =  object_getClass(instanceObject);
     
-    swizzleInstanceMethod(cls, @selector(initWithString:), @selector(hookInitWithString:));
-    swizzleInstanceMethod(cls, @selector(attributedSubstringFromRange:), @selector(hookAttributedSubstringFromRange:));
-    swizzleInstanceMethod(cls, @selector(attribute:atIndex:effectiveRange:), @selector(hookAttribute:atIndex:effectiveRange:));
-    swizzleInstanceMethod(cls, @selector(enumerateAttribute:inRange:options:usingBlock:), @selector(hookEnumerateAttribute:inRange:options:usingBlock:));
-    swizzleInstanceMethod(cls, @selector(enumerateAttributesInRange:options:usingBlock:), @selector(hookEnumerateAttributesInRange:options:usingBlock:));
+    tfy_crashswizzleInstanceMethod(cls, @selector(initWithString:), @selector(hookInitWithString:));
+    tfy_crashswizzleInstanceMethod(cls, @selector(attributedSubstringFromRange:), @selector(hookAttributedSubstringFromRange:));
+    tfy_crashswizzleInstanceMethod(cls, @selector(attribute:atIndex:effectiveRange:), @selector(hookAttribute:atIndex:effectiveRange:));
+    tfy_crashswizzleInstanceMethod(cls, @selector(enumerateAttribute:inRange:options:usingBlock:), @selector(hookEnumerateAttribute:inRange:options:usingBlock:));
+    tfy_crashswizzleInstanceMethod(cls, @selector(enumerateAttributesInRange:options:usingBlock:), @selector(hookEnumerateAttributesInRange:options:usingBlock:));
 }
 
 - (id)hookInitWithString:(NSString*)str{

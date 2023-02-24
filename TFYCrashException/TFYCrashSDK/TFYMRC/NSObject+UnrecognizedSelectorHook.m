@@ -6,7 +6,7 @@
 //
 
 #import "NSObject+UnrecognizedSelectorHook.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import <objc/runtime.h>
 #import "TFYCrashExceptionProxy.h"
 #import "TFYCrashExceptionMacros.h"
@@ -18,12 +18,12 @@ TFYCrashSYNTH_DUMMY_CLASS(NSObject_UnrecognizedSelectorHook)
 + (void)tfy_swizzleUnrecognizedSelector{
     
     //Class Method
-    swizzleClassMethod([self class], @selector(methodSignatureForSelector:), @selector(classMethodSignatureForSelectorSwizzled:));
-    swizzleClassMethod([self class], @selector(forwardInvocation:), @selector(forwardClassInvocationSwizzled:));
+    tfy_crashswizzleClassMethod([self class], @selector(methodSignatureForSelector:), @selector(classMethodSignatureForSelectorSwizzled:));
+    tfy_crashswizzleClassMethod([self class], @selector(forwardInvocation:), @selector(forwardClassInvocationSwizzled:));
     
     //Instance Method
-    swizzleInstanceMethod([self class], @selector(methodSignatureForSelector:), @selector(methodSignatureForSelectorSwizzled:));
-    swizzleInstanceMethod([self class], @selector(forwardInvocation:), @selector(forwardInvocationSwizzled:));
+    tfy_crashswizzleInstanceMethod([self class], @selector(methodSignatureForSelector:), @selector(methodSignatureForSelectorSwizzled:));
+    tfy_crashswizzleInstanceMethod([self class], @selector(forwardInvocation:), @selector(forwardInvocationSwizzled:));
 }
 
 + (NSMethodSignature*)classMethodSignatureForSelectorSwizzled:(SEL)aSelector {

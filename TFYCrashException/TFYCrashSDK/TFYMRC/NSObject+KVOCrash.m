@@ -6,7 +6,7 @@
 //
 
 #import "NSObject+KVOCrash.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import "TFYCrashExceptionProxy.h"
@@ -165,10 +165,10 @@ static const char DeallocKVOKey;
 @implementation NSObject (KVOCrash)
 
 + (void)tfy_swizzleKVOCrash{
-    swizzleInstanceMethod([self class], @selector(addObserver:forKeyPath:options:context:), @selector(hookAddObserver:forKeyPath:options:context:));
-    swizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:), @selector(hookRemoveObserver:forKeyPath:));
-    swizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:context:), @selector(hookRemoveObserver:forKeyPath:context:));
-    swizzleInstanceMethod([self class], @selector(observeValueForKeyPath:ofObject:change:context:), @selector(hookObserveValueForKeyPath:ofObject:change:context:));
+    tfy_crashswizzleInstanceMethod([self class], @selector(addObserver:forKeyPath:options:context:), @selector(hookAddObserver:forKeyPath:options:context:));
+    tfy_crashswizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:), @selector(hookRemoveObserver:forKeyPath:));
+    tfy_crashswizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:context:), @selector(hookRemoveObserver:forKeyPath:context:));
+    tfy_crashswizzleInstanceMethod([self class], @selector(observeValueForKeyPath:ofObject:change:context:), @selector(hookObserveValueForKeyPath:ofObject:change:context:));
 }
 
 - (void)hookAddObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{
@@ -212,8 +212,8 @@ static const char DeallocKVOKey;
 
     [item release];
     // clean the self and observer
-    tfy_swizzleDeallocIfNeeded(self.class);
-    tfy_swizzleDeallocIfNeeded(observer.class);
+    tfy_crashswizzleDeallocIfNeeded(self.class);
+    tfy_crashswizzleDeallocIfNeeded(observer.class);
 }
 
 - (void)hookRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void*)context{

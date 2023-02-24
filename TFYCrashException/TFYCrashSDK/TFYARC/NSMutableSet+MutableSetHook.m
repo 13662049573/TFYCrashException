@@ -7,7 +7,7 @@
 
 
 #import "NSMutableSet+MutableSetHook.h"
-#import "NSObject+SwizzleHook.h"
+#import "NSObject+Hook.h"
 #import <objc/runtime.h>
 #import "TFYCrashExceptionProxy.h"
 #import "TFYCrashExceptionMacros.h"
@@ -20,8 +20,8 @@ TFYCrashSYNTH_DUMMY_CLASS(NSMutableSet_MutableSetHook)
     NSMutableSet* instanceObject = [NSMutableSet new];
     Class cls =  object_getClass(instanceObject);
     
-    swizzleInstanceMethod(cls,@selector(addObject:), @selector(hookAddObject:));
-    swizzleInstanceMethod(cls,@selector(removeObject:), @selector(hookRemoveObject:));
+    tfy_crashswizzleInstanceMethod(cls,@selector(addObject:), @selector(hookAddObject:));
+    tfy_crashswizzleInstanceMethod(cls,@selector(removeObject:), @selector(hookRemoveObject:));
 }
 
 - (void) hookAddObject:(id)object {
