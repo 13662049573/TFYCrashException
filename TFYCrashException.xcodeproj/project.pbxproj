@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		362CBDAB29A8A29F00085921 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDAA29A8A29F00085921 /* AppDelegate.m */; };
+		362CBDAE29A8A29F00085921 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDAD29A8A29F00085921 /* SceneDelegate.m */; };
+		362CBDB129A8A29F00085921 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDB029A8A29F00085921 /* ViewController.m */; };
+		362CBDB429A8A29F00085921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362CBDB229A8A29F00085921 /* Main.storyboard */; };
+		362CBDB629A8A2A100085921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 362CBDB529A8A2A100085921 /* Assets.xcassets */; };
+		362CBDB929A8A2A100085921 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 362CBDB729A8A2A100085921 /* LaunchScreen.storyboard */; };
+		362CBDBC29A8A2A100085921 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDBB29A8A2A100085921 /* main.m */; };
+		362CBDC629A8A2A100085921 /* TFYCrashExceptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDC529A8A2A100085921 /* TFYCrashExceptionTests.m */; };
+		362CBDD029A8A2A100085921 /* TFYCrashExceptionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDCF29A8A2A100085921 /* TFYCrashExceptionUITests.m */; };
+		362CBDD229A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDD129A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		362CBDC229A8A2A100085921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 362CBD9E29A8A29F00085921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 362CBDA529A8A29F00085921;
+			remoteInfo = TFYCrashException;
+		};
+		362CBDCC29A8A2A100085921 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 362CBD9E29A8A29F00085921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 362CBDA529A8A29F00085921;
+			remoteInfo = TFYCrashException;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		362CBDA629A8A29F00085921 /* TFYCrashException.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFYCrashException.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		362CBDA929A8A29F00085921 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		362CBDAA29A8A29F00085921 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		362CBDAC29A8A29F00085921 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		362CBDAD29A8A29F00085921 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		362CBDAF29A8A29F00085921 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		362CBDB029A8A29F00085921 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		362CBDB329A8A29F00085921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		362CBDB529A8A2A100085921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		362CBDB829A8A2A100085921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		362CBDBA29A8A2A100085921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		362CBDBB29A8A2A100085921 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		362CBDC129A8A2A100085921 /* TFYCrashExceptionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFYCrashExceptionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		362CBDC529A8A2A100085921 /* TFYCrashExceptionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCrashExceptionTests.m; sourceTree = "<group>"; };
+		362CBDCB29A8A2A100085921 /* TFYCrashExceptionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFYCrashExceptionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		362CBDCF29A8A2A100085921 /* TFYCrashExceptionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCrashExceptionUITests.m; sourceTree = "<group>"; };
+		362CBDD129A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCrashExceptionUITestsLaunchTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		362CBDA329A8A29F00085921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362CBDBE29A8A2A100085921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362CBDC829A8A2A100085921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		362CBD9D29A8A29F00085921 = {
+			isa = PBXGroup;
+			children = (
+				362CBDA829A8A29F00085921 /* TFYCrashException */,
+				362CBDC429A8A2A100085921 /* TFYCrashExceptionTests */,
+				362CBDCE29A8A2A100085921 /* TFYCrashExceptionUITests */,
+				362CBDA729A8A29F00085921 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		362CBDA729A8A29F00085921 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				362CBDA629A8A29F00085921 /* TFYCrashException.app */,
+				362CBDC129A8A2A100085921 /* TFYCrashExceptionTests.xctest */,
+				362CBDCB29A8A2A100085921 /* TFYCrashExceptionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		362CBDA829A8A29F00085921 /* TFYCrashException */ = {
+			isa = PBXGroup;
+			children = (
+				362CBDA929A8A29F00085921 /* AppDelegate.h */,
+				362CBDAA29A8A29F00085921 /* AppDelegate.m */,
+				362CBDAC29A8A29F00085921 /* SceneDelegate.h */,
+				362CBDAD29A8A29F00085921 /* SceneDelegate.m */,
+				362CBDAF29A8A29F00085921 /* ViewController.h */,
+				362CBDB029A8A29F00085921 /* ViewController.m */,
+				362CBDB229A8A29F00085921 /* Main.storyboard */,
+				362CBDB529A8A2A100085921 /* Assets.xcassets */,
+				362CBDB729A8A2A100085921 /* LaunchScreen.storyboard */,
+				362CBDBA29A8A2A100085921 /* Info.plist */,
+				362CBDBB29A8A2A100085921 /* main.m */,
+			);
+			path = TFYCrashException;
+			sourceTree = "<group>";
+		};
+		362CBDC429A8A2A100085921 /* TFYCrashExceptionTests */ = {
+			isa = PBXGroup;
+			children = (
+				362CBDC529A8A2A100085921 /* TFYCrashExceptionTests.m */,
+			);
+			path = TFYCrashExceptionTests;
+			sourceTree = "<group>";
+		};
+		362CBDCE29A8A2A100085921 /* TFYCrashExceptionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				362CBDCF29A8A2A100085921 /* TFYCrashExceptionUITests.m */,
+				362CBDD129A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m */,
+			);
+			path = TFYCrashExceptionUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		362CBDA529A8A29F00085921 /* TFYCrashException */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362CBDD529A8A2A100085921 /* Build configuration list for PBXNativeTarget "TFYCrashException" */;
+			buildPhases = (
+				362CBDA229A8A29F00085921 /* Sources */,
+				362CBDA329A8A29F00085921 /* Frameworks */,
+				362CBDA429A8A29F00085921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TFYCrashException;
+			productName = TFYCrashException;
+			productReference = 362CBDA629A8A29F00085921 /* TFYCrashException.app */;
+			productType = "com.apple.product-type.application";
+		};
+		362CBDC029A8A2A100085921 /* TFYCrashExceptionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362CBDD829A8A2A100085921 /* Build configuration list for PBXNativeTarget "TFYCrashExceptionTests" */;
+			buildPhases = (
+				362CBDBD29A8A2A100085921 /* Sources */,
+				362CBDBE29A8A2A100085921 /* Frameworks */,
+				362CBDBF29A8A2A100085921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				362CBDC329A8A2A100085921 /* PBXTargetDependency */,
+			);
+			name = TFYCrashExceptionTests;
+			productName = TFYCrashExceptionTests;
+			productReference = 362CBDC129A8A2A100085921 /* TFYCrashExceptionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		362CBDCA29A8A2A100085921 /* TFYCrashExceptionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 362CBDDB29A8A2A100085921 /* Build configuration list for PBXNativeTarget "TFYCrashExceptionUITests" */;
+			buildPhases = (
+				362CBDC729A8A2A100085921 /* Sources */,
+				362CBDC829A8A2A100085921 /* Frameworks */,
+				362CBDC929A8A2A100085921 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				362CBDCD29A8A2A100085921 /* PBXTargetDependency */,
+			);
+			name = TFYCrashExceptionUITests;
+			productName = TFYCrashExceptionUITests;
+			productReference = 362CBDCB29A8A2A100085921 /* TFYCrashExceptionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		362CBD9E29A8A29F00085921 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					362CBDA529A8A29F00085921 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					362CBDC029A8A2A100085921 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 362CBDA529A8A29F00085921;
+					};
+					362CBDCA29A8A2A100085921 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 362CBDA529A8A29F00085921;
+					};
+				};
+			};
+			buildConfigurationList = 362CBDA129A8A29F00085921 /* Build configuration list for PBXProject "TFYCrashException" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 362CBD9D29A8A29F00085921;
+			productRefGroup = 362CBDA729A8A29F00085921 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				362CBDA529A8A29F00085921 /* TFYCrashException */,
+				362CBDC029A8A2A100085921 /* TFYCrashExceptionTests */,
+				362CBDCA29A8A2A100085921 /* TFYCrashExceptionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		362CBDA429A8A29F00085921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362CBDB929A8A2A100085921 /* LaunchScreen.storyboard in Resources */,
+				362CBDB629A8A2A100085921 /* Assets.xcassets in Resources */,
+				362CBDB429A8A29F00085921 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362CBDBF29A8A2A100085921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362CBDC929A8A2A100085921 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		362CBDA229A8A29F00085921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362CBDB129A8A29F00085921 /* ViewController.m in Sources */,
+				362CBDAB29A8A29F00085921 /* AppDelegate.m in Sources */,
+				362CBDBC29A8A2A100085921 /* main.m in Sources */,
+				362CBDAE29A8A29F00085921 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362CBDBD29A8A2A100085921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362CBDC629A8A2A100085921 /* TFYCrashExceptionTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		362CBDC729A8A2A100085921 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				362CBDD229A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m in Sources */,
+				362CBDD029A8A2A100085921 /* TFYCrashExceptionUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		362CBDC329A8A2A100085921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 362CBDA529A8A29F00085921 /* TFYCrashException */;
+			targetProxy = 362CBDC229A8A2A100085921 /* PBXContainerItemProxy */;
+		};
+		362CBDCD29A8A2A100085921 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 362CBDA529A8A29F00085921 /* TFYCrashException */;
+			targetProxy = 362CBDCC29A8A2A100085921 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		362CBDB229A8A29F00085921 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362CBDB329A8A29F00085921 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		362CBDB729A8A2A100085921 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				362CBDB829A8A2A100085921 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		362CBDD329A8A2A100085921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		362CBDD429A8A2A100085921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		362CBDD629A8A2A100085921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QH95759TSS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TFYCrashException/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfy.chat.company.TFYCrashException;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		362CBDD729A8A2A100085921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QH95759TSS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TFYCrashException/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfy.chat.company.TFYCrashException;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		362CBDD929A8A2A100085921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QH95759TSS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfy.chat.company.TFYCrashExceptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFYCrashException.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TFYCrashException";
+			};
+			name = Debug;
+		};
+		362CBDDA29A8A2A100085921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QH95759TSS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfy.chat.company.TFYCrashExceptionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFYCrashException.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TFYCrashException";
+			};
+			name = Release;
+		};
+		362CBDDC29A8A2A100085921 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QH95759TSS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfy.chat.company.TFYCrashExceptionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TFYCrashException;
+			};
+			name = Debug;
+		};
+		362CBDDD29A8A2A100085921 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QH95759TSS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tfy.chat.company.TFYCrashExceptionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TFYCrashException;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		362CBDA129A8A29F00085921 /* Build configuration list for PBXProject "TFYCrashException" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362CBDD329A8A2A100085921 /* Debug */,
+				362CBDD429A8A2A100085921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362CBDD529A8A2A100085921 /* Build configuration list for PBXNativeTarget "TFYCrashException" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362CBDD629A8A2A100085921 /* Debug */,
+				362CBDD729A8A2A100085921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362CBDD829A8A2A100085921 /* Build configuration list for PBXNativeTarget "TFYCrashExceptionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362CBDD929A8A2A100085921 /* Debug */,
+				362CBDDA29A8A2A100085921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		362CBDDB29A8A2A100085921 /* Build configuration list for PBXNativeTarget "TFYCrashExceptionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				362CBDDC29A8A2A100085921 /* Debug */,
+				362CBDDD29A8A2A100085921 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 362CBD9E29A8A29F00085921 /* Project object */;
+}
