@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYCrashSDK"
 
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
 
   spec.summary      = "完美处理项目闪退问题，后期会持续更新。"
 
@@ -27,11 +27,11 @@ Pod::Spec.new do |spec|
 
   spec.default_subspec = 'All'
   spec.subspec 'All' do |ss|
-    ss.dependency 'TFYCrashSDK/TFYSwizzle'
-    ss.dependency 'TFYCrashSDK/TFYARC'
-    ss.dependency 'TFYCrashSDK/TFYMRC'
-    ss.dependency 'TFYCrashSDK/TFYMain'
-    ss.dependency 'TFYCrashSDK/TFYDeallocBlock'
+    ss.dependency 'TFYCrashException/TFYSwizzle'
+    ss.dependency 'TFYCrashException/TFYARC'
+    ss.dependency 'TFYCrashException/TFYMRC'
+    ss.dependency 'TFYCrashException/TFYMain'
+    ss.dependency 'TFYCrashException/TFYDeallocBlock'
   end
 
   spec.subspec 'TFYARC' do |ss|
