@@ -6,6 +6,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TFYCrashException.h"
+#import "TFYCrashExceptionProxy.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [TFYCrashException configExceptionCategory:TFYCrashExceptionGuardAll];
+    [TFYCrashException startGuardException];
+    
     return YES;
 }
 

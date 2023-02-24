@@ -17,6 +17,27 @@
 		362CBDC629A8A2A100085921 /* TFYCrashExceptionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDC529A8A2A100085921 /* TFYCrashExceptionTests.m */; };
 		362CBDD029A8A2A100085921 /* TFYCrashExceptionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDCF29A8A2A100085921 /* TFYCrashExceptionUITests.m */; };
 		362CBDD229A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDD129A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m */; };
+		362CBDE629A8A35000085921 /* NSObject+DeallocBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDE529A8A35000085921 /* NSObject+DeallocBlock.m */; };
+		362CBDF729A8A38100085921 /* NSMutableAttributedString+MutableAttributedStringHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDE929A8A37B00085921 /* NSMutableAttributedString+MutableAttributedStringHook.m */; };
+		362CBDF829A8A38100085921 /* NSNotificationCenter+ClearNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDEA29A8A37C00085921 /* NSNotificationCenter+ClearNotification.m */; };
+		362CBDF929A8A38100085921 /* NSString+StringHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDF129A8A37E00085921 /* NSString+StringHook.m */; };
+		362CBDFA29A8A38100085921 /* NSAttributedString+AttributedStringHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDF229A8A37F00085921 /* NSAttributedString+AttributedStringHook.m */; };
+		362CBDFB29A8A38100085921 /* NSMutableString+MutableStringHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDF329A8A37F00085921 /* NSMutableString+MutableStringHook.m */; };
+		362CBDFC29A8A38100085921 /* NSMutableSet+MutableSetHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDF429A8A38000085921 /* NSMutableSet+MutableSetHook.m */; };
+		362CBDFD29A8A38100085921 /* NSTimer+CleanTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDF529A8A38000085921 /* NSTimer+CleanTimer.m */; };
+		362CBDFE29A8A38100085921 /* NSSet+SetHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDF629A8A38100085921 /* NSSet+SetHook.m */; };
+		362CBE0129A8A39B00085921 /* NSObject+SwizzleHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBDFF29A8A39A00085921 /* NSObject+SwizzleHook.m */; };
+		362CBE0E29A8A3C100085921 /* NSMutableDictionary+MutableDictionaryHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0229A8A3BC00085921 /* NSMutableDictionary+MutableDictionaryHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		362CBE0F29A8A3C100085921 /* NSArray+ArrayHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0329A8A3BD00085921 /* NSArray+ArrayHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		362CBE1029A8A3C100085921 /* NSMutableArray+MutableArrayHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0429A8A3BD00085921 /* NSMutableArray+MutableArrayHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		362CBE1129A8A3C100085921 /* NSObject+KVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0629A8A3BE00085921 /* NSObject+KVOCrash.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		362CBE1229A8A3C100085921 /* NSDictionary+DictionaryHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0A29A8A3C000085921 /* NSDictionary+DictionaryHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		362CBE1329A8A3C100085921 /* NSObject+UnrecognizedSelectorHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0B29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		362CBE1629A8A43900085921 /* TFYCrashExceptionProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE1529A8A43900085921 /* TFYCrashExceptionProxy.m */; };
+		362CBE1929A8A44D00085921 /* TFYCrashException.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE1829A8A44D00085921 /* TFYCrashException.m */; };
+		362CBE2129A8ACD300085921 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE1B29A8ACD300085921 /* PlayerViewController.m */; };
+		362CBE2229A8ACD300085921 /* KVOObjectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE1E29A8ACD300085921 /* KVOObjectDemo.m */; };
+		362CBE2329A8ACD300085921 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE2029A8ACD300085921 /* PushViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +75,49 @@
 		362CBDCB29A8A2A100085921 /* TFYCrashExceptionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFYCrashExceptionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		362CBDCF29A8A2A100085921 /* TFYCrashExceptionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCrashExceptionUITests.m; sourceTree = "<group>"; };
 		362CBDD129A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCrashExceptionUITestsLaunchTests.m; sourceTree = "<group>"; };
+		362CBDE429A8A34F00085921 /* NSObject+DeallocBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DeallocBlock.h"; sourceTree = "<group>"; };
+		362CBDE529A8A35000085921 /* NSObject+DeallocBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DeallocBlock.m"; sourceTree = "<group>"; };
+		362CBDE729A8A37A00085921 /* NSSet+SetHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+SetHook.h"; sourceTree = "<group>"; };
+		362CBDE829A8A37B00085921 /* NSString+StringHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringHook.h"; sourceTree = "<group>"; };
+		362CBDE929A8A37B00085921 /* NSMutableAttributedString+MutableAttributedStringHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+MutableAttributedStringHook.m"; sourceTree = "<group>"; };
+		362CBDEA29A8A37C00085921 /* NSNotificationCenter+ClearNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotificationCenter+ClearNotification.m"; sourceTree = "<group>"; };
+		362CBDEB29A8A37C00085921 /* NSTimer+CleanTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+CleanTimer.h"; sourceTree = "<group>"; };
+		362CBDEC29A8A37D00085921 /* NSMutableSet+MutableSetHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+MutableSetHook.h"; sourceTree = "<group>"; };
+		362CBDED29A8A37D00085921 /* NSMutableString+MutableStringHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+MutableStringHook.h"; sourceTree = "<group>"; };
+		362CBDEE29A8A37D00085921 /* NSMutableAttributedString+MutableAttributedStringHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+MutableAttributedStringHook.h"; sourceTree = "<group>"; };
+		362CBDEF29A8A37E00085921 /* NSNotificationCenter+ClearNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+ClearNotification.h"; sourceTree = "<group>"; };
+		362CBDF029A8A37E00085921 /* NSAttributedString+AttributedStringHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+AttributedStringHook.h"; sourceTree = "<group>"; };
+		362CBDF129A8A37E00085921 /* NSString+StringHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringHook.m"; sourceTree = "<group>"; };
+		362CBDF229A8A37F00085921 /* NSAttributedString+AttributedStringHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+AttributedStringHook.m"; sourceTree = "<group>"; };
+		362CBDF329A8A37F00085921 /* NSMutableString+MutableStringHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+MutableStringHook.m"; sourceTree = "<group>"; };
+		362CBDF429A8A38000085921 /* NSMutableSet+MutableSetHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+MutableSetHook.m"; sourceTree = "<group>"; };
+		362CBDF529A8A38000085921 /* NSTimer+CleanTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+CleanTimer.m"; sourceTree = "<group>"; };
+		362CBDF629A8A38100085921 /* NSSet+SetHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+SetHook.m"; sourceTree = "<group>"; };
+		362CBDFF29A8A39A00085921 /* NSObject+SwizzleHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SwizzleHook.m"; sourceTree = "<group>"; };
+		362CBE0029A8A39B00085921 /* NSObject+SwizzleHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SwizzleHook.h"; sourceTree = "<group>"; };
+		362CBE0229A8A3BC00085921 /* NSMutableDictionary+MutableDictionaryHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+MutableDictionaryHook.m"; sourceTree = "<group>"; };
+		362CBE0329A8A3BD00085921 /* NSArray+ArrayHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ArrayHook.m"; sourceTree = "<group>"; };
+		362CBE0429A8A3BD00085921 /* NSMutableArray+MutableArrayHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+MutableArrayHook.m"; sourceTree = "<group>"; };
+		362CBE0529A8A3BE00085921 /* NSMutableDictionary+MutableDictionaryHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+MutableDictionaryHook.h"; sourceTree = "<group>"; };
+		362CBE0629A8A3BE00085921 /* NSObject+KVOCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOCrash.m"; sourceTree = "<group>"; };
+		362CBE0729A8A3BE00085921 /* NSArray+ArrayHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ArrayHook.h"; sourceTree = "<group>"; };
+		362CBE0829A8A3BF00085921 /* NSDictionary+DictionaryHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+DictionaryHook.h"; sourceTree = "<group>"; };
+		362CBE0929A8A3BF00085921 /* NSObject+KVOCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOCrash.h"; sourceTree = "<group>"; };
+		362CBE0A29A8A3C000085921 /* NSDictionary+DictionaryHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+DictionaryHook.m"; sourceTree = "<group>"; };
+		362CBE0B29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UnrecognizedSelectorHook.m"; sourceTree = "<group>"; };
+		362CBE0C29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+UnrecognizedSelectorHook.h"; sourceTree = "<group>"; };
+		362CBE0D29A8A3C100085921 /* NSMutableArray+MutableArrayHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+MutableArrayHook.h"; sourceTree = "<group>"; };
+		362CBE1429A8A43900085921 /* TFYCrashExceptionProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCrashExceptionProxy.h; sourceTree = "<group>"; };
+		362CBE1529A8A43900085921 /* TFYCrashExceptionProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCrashExceptionProxy.m; sourceTree = "<group>"; };
+		362CBE1729A8A44D00085921 /* TFYCrashException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCrashException.h; sourceTree = "<group>"; };
+		362CBE1829A8A44D00085921 /* TFYCrashException.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYCrashException.m; sourceTree = "<group>"; };
+		362CBE1A29A8A48500085921 /* TFYCrashExceptionMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCrashExceptionMacros.h; sourceTree = "<group>"; };
+		362CBE1B29A8ACD300085921 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
+		362CBE1C29A8ACD300085921 /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		362CBE1D29A8ACD300085921 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		362CBE1E29A8ACD300085921 /* KVOObjectDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOObjectDemo.m; sourceTree = "<group>"; };
+		362CBE1F29A8ACD300085921 /* KVOObjectDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOObjectDemo.h; sourceTree = "<group>"; };
+		362CBE2029A8ACD300085921 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +168,19 @@
 		362CBDA829A8A29F00085921 /* TFYCrashException */ = {
 			isa = PBXGroup;
 			children = (
+				362CBDDE29A8A2C500085921 /* TFYCrashSDK */,
 				362CBDA929A8A29F00085921 /* AppDelegate.h */,
 				362CBDAA29A8A29F00085921 /* AppDelegate.m */,
 				362CBDAC29A8A29F00085921 /* SceneDelegate.h */,
 				362CBDAD29A8A29F00085921 /* SceneDelegate.m */,
 				362CBDAF29A8A29F00085921 /* ViewController.h */,
 				362CBDB029A8A29F00085921 /* ViewController.m */,
+				362CBE1F29A8ACD300085921 /* KVOObjectDemo.h */,
+				362CBE1E29A8ACD300085921 /* KVOObjectDemo.m */,
+				362CBE1D29A8ACD300085921 /* PlayerViewController.h */,
+				362CBE1B29A8ACD300085921 /* PlayerViewController.m */,
+				362CBE1C29A8ACD300085921 /* PushViewController.h */,
+				362CBE2029A8ACD300085921 /* PushViewController.m */,
 				362CBDB229A8A29F00085921 /* Main.storyboard */,
 				362CBDB529A8A2A100085921 /* Assets.xcassets */,
 				362CBDB729A8A2A100085921 /* LaunchScreen.storyboard */,
@@ -134,6 +205,90 @@
 				362CBDD129A8A2A100085921 /* TFYCrashExceptionUITestsLaunchTests.m */,
 			);
 			path = TFYCrashExceptionUITests;
+			sourceTree = "<group>";
+		};
+		362CBDDE29A8A2C500085921 /* TFYCrashSDK */ = {
+			isa = PBXGroup;
+			children = (
+				362CBDE129A8A31B00085921 /* TFYARC */,
+				362CBDE329A8A31C00085921 /* TFYDeallocBlock */,
+				362CBDE229A8A31C00085921 /* TFYMain */,
+				362CBDDF29A8A31A00085921 /* TFYMRC */,
+				362CBDE029A8A31B00085921 /* TFYSwizzle */,
+			);
+			path = TFYCrashSDK;
+			sourceTree = "<group>";
+		};
+		362CBDDF29A8A31A00085921 /* TFYMRC */ = {
+			isa = PBXGroup;
+			children = (
+				362CBE0729A8A3BE00085921 /* NSArray+ArrayHook.h */,
+				362CBE0329A8A3BD00085921 /* NSArray+ArrayHook.m */,
+				362CBE0829A8A3BF00085921 /* NSDictionary+DictionaryHook.h */,
+				362CBE0A29A8A3C000085921 /* NSDictionary+DictionaryHook.m */,
+				362CBE0D29A8A3C100085921 /* NSMutableArray+MutableArrayHook.h */,
+				362CBE0429A8A3BD00085921 /* NSMutableArray+MutableArrayHook.m */,
+				362CBE0529A8A3BE00085921 /* NSMutableDictionary+MutableDictionaryHook.h */,
+				362CBE0229A8A3BC00085921 /* NSMutableDictionary+MutableDictionaryHook.m */,
+				362CBE0929A8A3BF00085921 /* NSObject+KVOCrash.h */,
+				362CBE0629A8A3BE00085921 /* NSObject+KVOCrash.m */,
+				362CBE0C29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.h */,
+				362CBE0B29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.m */,
+			);
+			path = TFYMRC;
+			sourceTree = "<group>";
+		};
+		362CBDE029A8A31B00085921 /* TFYSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				362CBE0029A8A39B00085921 /* NSObject+SwizzleHook.h */,
+				362CBDFF29A8A39A00085921 /* NSObject+SwizzleHook.m */,
+			);
+			path = TFYSwizzle;
+			sourceTree = "<group>";
+		};
+		362CBDE129A8A31B00085921 /* TFYARC */ = {
+			isa = PBXGroup;
+			children = (
+				362CBDF029A8A37E00085921 /* NSAttributedString+AttributedStringHook.h */,
+				362CBDF229A8A37F00085921 /* NSAttributedString+AttributedStringHook.m */,
+				362CBDEE29A8A37D00085921 /* NSMutableAttributedString+MutableAttributedStringHook.h */,
+				362CBDE929A8A37B00085921 /* NSMutableAttributedString+MutableAttributedStringHook.m */,
+				362CBDEC29A8A37D00085921 /* NSMutableSet+MutableSetHook.h */,
+				362CBDF429A8A38000085921 /* NSMutableSet+MutableSetHook.m */,
+				362CBDED29A8A37D00085921 /* NSMutableString+MutableStringHook.h */,
+				362CBDF329A8A37F00085921 /* NSMutableString+MutableStringHook.m */,
+				362CBDEF29A8A37E00085921 /* NSNotificationCenter+ClearNotification.h */,
+				362CBDEA29A8A37C00085921 /* NSNotificationCenter+ClearNotification.m */,
+				362CBDE729A8A37A00085921 /* NSSet+SetHook.h */,
+				362CBDF629A8A38100085921 /* NSSet+SetHook.m */,
+				362CBDE829A8A37B00085921 /* NSString+StringHook.h */,
+				362CBDF129A8A37E00085921 /* NSString+StringHook.m */,
+				362CBDEB29A8A37C00085921 /* NSTimer+CleanTimer.h */,
+				362CBDF529A8A38000085921 /* NSTimer+CleanTimer.m */,
+			);
+			path = TFYARC;
+			sourceTree = "<group>";
+		};
+		362CBDE229A8A31C00085921 /* TFYMain */ = {
+			isa = PBXGroup;
+			children = (
+				362CBE1429A8A43900085921 /* TFYCrashExceptionProxy.h */,
+				362CBE1529A8A43900085921 /* TFYCrashExceptionProxy.m */,
+				362CBE1729A8A44D00085921 /* TFYCrashException.h */,
+				362CBE1829A8A44D00085921 /* TFYCrashException.m */,
+				362CBE1A29A8A48500085921 /* TFYCrashExceptionMacros.h */,
+			);
+			path = TFYMain;
+			sourceTree = "<group>";
+		};
+		362CBDE329A8A31C00085921 /* TFYDeallocBlock */ = {
+			isa = PBXGroup;
+			children = (
+				362CBDE429A8A34F00085921 /* NSObject+DeallocBlock.h */,
+				362CBDE529A8A35000085921 /* NSObject+DeallocBlock.m */,
+			);
+			path = TFYDeallocBlock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,10 +421,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				362CBE1129A8A3C100085921 /* NSObject+KVOCrash.m in Sources */,
 				362CBDB129A8A29F00085921 /* ViewController.m in Sources */,
+				362CBE0129A8A39B00085921 /* NSObject+SwizzleHook.m in Sources */,
+				362CBE1929A8A44D00085921 /* TFYCrashException.m in Sources */,
+				362CBDF729A8A38100085921 /* NSMutableAttributedString+MutableAttributedStringHook.m in Sources */,
+				362CBDFA29A8A38100085921 /* NSAttributedString+AttributedStringHook.m in Sources */,
+				362CBE0E29A8A3C100085921 /* NSMutableDictionary+MutableDictionaryHook.m in Sources */,
 				362CBDAB29A8A29F00085921 /* AppDelegate.m in Sources */,
+				362CBDF929A8A38100085921 /* NSString+StringHook.m in Sources */,
+				362CBDFC29A8A38100085921 /* NSMutableSet+MutableSetHook.m in Sources */,
+				362CBDFB29A8A38100085921 /* NSMutableString+MutableStringHook.m in Sources */,
+				362CBE2329A8ACD300085921 /* PushViewController.m in Sources */,
+				362CBE2129A8ACD300085921 /* PlayerViewController.m in Sources */,
+				362CBE0F29A8A3C100085921 /* NSArray+ArrayHook.m in Sources */,
+				362CBDF829A8A38100085921 /* NSNotificationCenter+ClearNotification.m in Sources */,
+				362CBE1029A8A3C100085921 /* NSMutableArray+MutableArrayHook.m in Sources */,
+				362CBDFD29A8A38100085921 /* NSTimer+CleanTimer.m in Sources */,
 				362CBDBC29A8A2A100085921 /* main.m in Sources */,
+				362CBDFE29A8A38100085921 /* NSSet+SetHook.m in Sources */,
+				362CBE1329A8A3C100085921 /* NSObject+UnrecognizedSelectorHook.m in Sources */,
+				362CBDE629A8A35000085921 /* NSObject+DeallocBlock.m in Sources */,
+				362CBE1629A8A43900085921 /* TFYCrashExceptionProxy.m in Sources */,
 				362CBDAE29A8A29F00085921 /* SceneDelegate.m in Sources */,
+				362CBE2229A8ACD300085921 /* KVOObjectDemo.m in Sources */,
+				362CBE1229A8A3C100085921 /* NSDictionary+DictionaryHook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
