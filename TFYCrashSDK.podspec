@@ -35,7 +35,6 @@ Pod::Spec.new do |spec|
       ss.requires_arc = true
       ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYARC/*.{h,m}"
       ss.dependency 'TFYCrashSDK/TFYMain'
-      ss.dependency 'TFYCrashSDK/TFYDeallocBlock'
     end
   
     sss.subspec 'TFYMain' do |ss|
@@ -47,11 +46,6 @@ Pod::Spec.new do |spec|
       ss.requires_arc = false
       ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYMRC/*.{h,m}"
       ss.dependency 'TFYCrashSDK/TFYMain'
-    end
-  
-    sss.subspec 'TFYDeallocBlock' do |ss|
-      ss.requires_arc = true
-      ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYDeallocBlock/*.{h,m}"
     end
 
   end
