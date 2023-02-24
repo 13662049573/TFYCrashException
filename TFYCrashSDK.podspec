@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYCrashSDK"
 
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
 
   spec.summary      = "完美处理项目闪退问题，后期会持续更新。"
 
@@ -25,8 +25,10 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/13662049573/TFYCrashException.git", :tag => spec.version }
 
-  spec.default_subspec = 'All'
-  spec.subspec 'All' do |ss|
+  
+  spec.default_subspec = 'TFYCrashSDK'
+
+  spec.subspec 'TFYCrashSDK' do |ss|
     ss.dependency 'TFYCrashException/TFYSwizzle'
     ss.dependency 'TFYCrashException/TFYARC'
     ss.dependency 'TFYCrashException/TFYMRC'
