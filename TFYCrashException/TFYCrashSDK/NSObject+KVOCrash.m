@@ -52,6 +52,7 @@ static const char DeallocKVOKey;
 }
 
 - (void)dealloc {
+    [super dealloc];
     self.observer = nil;
     self.whichObject = nil;
     self.context = nil;
@@ -118,11 +119,8 @@ static const char DeallocKVOKey;
     return _kvoLock;
 }
 
-/**
- Clean the kvo object array and temp var
- release the dispatch_semaphore
- */
-- (void)dealloc{
+- (void)dealloc {
+    [super dealloc];
     self.kvoObjectSet = nil;
     self.kvoLock = nil;
 }
