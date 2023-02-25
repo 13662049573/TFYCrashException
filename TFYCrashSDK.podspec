@@ -26,17 +26,8 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/13662049573/TFYCrashException.git", :tag => "#{spec.version}" }
 
   spec.subspec 'TFYCrashSDK' do |sss|
-    sss.source_files = "TFYCrashException/TFYCrashSDK/TFYCrashSDK.h"
-    
-    sss.subspec 'TFYHook' do |ss|
-      ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYHook/**/*.{h,m}"
-    end
-
-    sss.subspec 'TFYCrash' do |ss|
-      ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYCrash/**/*.{h,m}"
-      ss.dependency 'TFYCrashSDK/TFYHook'
-    end
-
+    sss.public_header_files = "TFYCrashException/TFYCrashSDK/TFYCrashSDK.h"
+    sss.source_files  = "TFYCrashException/TFYCrashSDK/TFYCrash/**/*.{h,m}"
   end
 
   spec.requires_arc = true
