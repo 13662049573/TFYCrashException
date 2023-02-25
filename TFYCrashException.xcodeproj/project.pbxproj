@@ -29,7 +29,7 @@
 		362CBE0E29A8A3C100085921 /* NSMutableDictionary+MutableDictionaryHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0229A8A3BC00085921 /* NSMutableDictionary+MutableDictionaryHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		362CBE0F29A8A3C100085921 /* NSArray+ArrayHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0329A8A3BD00085921 /* NSArray+ArrayHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		362CBE1029A8A3C100085921 /* NSMutableArray+MutableArrayHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0429A8A3BD00085921 /* NSMutableArray+MutableArrayHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		362CBE1129A8A3C100085921 /* NSObject+KVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0629A8A3BE00085921 /* NSObject+KVOCrash.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		362CBE1129A8A3C100085921 /* NSObject+KVOCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0629A8A3BE00085921 /* NSObject+KVOCrash.m */; };
 		362CBE1229A8A3C100085921 /* NSDictionary+DictionaryHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0A29A8A3C000085921 /* NSDictionary+DictionaryHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		362CBE1329A8A3C100085921 /* NSObject+UnrecognizedSelectorHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE0B29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		362CBE1629A8A43900085921 /* TFYCrashExceptionProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE1529A8A43900085921 /* TFYCrashExceptionProxy.m */; };

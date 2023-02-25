@@ -52,7 +52,6 @@ static const char DeallocKVOKey;
 }
 
 - (void)dealloc {
-    [super dealloc];
     self.observer = nil;
     self.whichObject = nil;
     self.context = nil;
@@ -120,7 +119,6 @@ static const char DeallocKVOKey;
 }
 
 - (void)dealloc {
-    [super dealloc];
     self.kvoObjectSet = nil;
     self.kvoLock = nil;
 }
@@ -189,7 +187,6 @@ static const char DeallocKVOKey;
     if (!objectContainer) {
         objectContainer = [KVOObjectContainer new];
         objc_setAssociatedObject(self, &DeallocKVOKey, objectContainer, OBJC_ASSOCIATION_RETAIN);
-//        [objectContainer release];
     }
 
     [objectContainer checkAddKVOItemExist:item existResult:^{
@@ -201,11 +198,9 @@ static const char DeallocKVOKey;
     if (!observerContainer) {
         observerContainer = [KVOObjectContainer new];
         objc_setAssociatedObject(observer, &DeallocKVOKey, observerContainer, OBJC_ASSOCIATION_RETAIN);
-//        [observerContainer release];
     }
     [observerContainer checkAddKVOItemExist:item existResult:nil];
 
-//    [item release];
     // clean the self and observer
     [self tfy_crashswizzleDeallocIfNeeded:self.class];
     [self tfy_crashswizzleDeallocIfNeeded:observer.class];
