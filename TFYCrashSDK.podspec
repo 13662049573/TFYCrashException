@@ -32,19 +32,19 @@ Pod::Spec.new do |spec|
       ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYHook/**/*.{h,m}"
     end
 
-    sss.subspec 'TFYMain' do |ss|
-      ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYMain/**/*.{h,m}"
+    sss.subspec 'TFYCrash' do |ss|
+      ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYCrash/**/*.{h,m}"
     end
 
     sss.subspec 'TFYARC' do |ss|
       ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYARC/**/*.{h,m}"
-      ss.dependency 'TFYCrashSDK/TFYMain'
+      ss.dependency 'TFYCrashSDK/TFYCrash'
       ss.dependency 'TFYCrashSDK/TFYHook'
     end
   
     sss.subspec 'TFYMRC' do |ss|
       ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYMRC/**/*.{h,m}"
-      ss.dependency 'TFYCrashSDK/TFYMain'
+      ss.dependency 'TFYCrashSDK/TFYCrash'
       ss.dependency 'TFYCrashSDK/TFYHook'
     end
 
