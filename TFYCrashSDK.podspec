@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYCrashSDK"
 
-  spec.version      = "1.1.2"
+  spec.version      = "1.1.3"
 
   spec.summary      = "完美处理项目闪退问题，后期会持续更新。最低iOS支持iOS12系统以上."
 
@@ -34,24 +34,11 @@ Pod::Spec.new do |spec|
 
     sss.subspec 'TFYCrash' do |ss|
       ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYCrash/**/*.{h,m}"
-    end
-
-    sss.subspec 'TFYARC' do |ss|
-      ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYARC/**/*.{h,m}"
-      ss.dependency 'TFYCrashException/TFYCrashSDK/TFYCrash'
-      ss.dependency 'TFYCrashException/TFYCrashSDK/TFYHook'
-    end
-  
-    sss.subspec 'TFYMRC' do |ss|
-      ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYMRC/**/*.{h,m}"
-      ss.dependency 'TFYCrashException/TFYCrashSDK/TFYCrash'
       ss.dependency 'TFYCrashException/TFYCrashSDK/TFYHook'
     end
 
   end
 
   spec.requires_arc = true
-
-  spec.xcconfig = {"ENABLE_STRICT_OBJC_MSGSEND" => "NO", 'GCC_PREPROCESSOR_DEFINITIONS' => '$(inherited) COCOAPODS=1 NDEBUG=1 _DEBUG_TAG_'}
 
 end
