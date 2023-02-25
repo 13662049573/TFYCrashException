@@ -22,7 +22,7 @@ pod 'TFYCrashSDK'
 [TFYCrashException configExceptionCategory:TFYCrashExceptionGuardAll];
 [TFYCrashException startGuardException];
 
-导入Source文件夹里所有文件，需要将MRC目录下所有.m文件，编译选项更改成-fno-objc-arc
+导入Source文件夹里所有文件，需要将TFYMRC目录下所有.m文件，编译选项更改成-fno-objc-arc
 
 当异常时，默认程序不会中断，如果需要遇到异常时退出，需要如下设置:
     //Default value:NO
