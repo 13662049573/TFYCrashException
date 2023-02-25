@@ -55,9 +55,7 @@ static const char DeallocKVOKey;
     self.observer = nil;
     self.whichObject = nil;
     self.context = nil;
-    if (self.keyPath) {
-        [self.keyPath release];
-    }
+    self.keyPath = nil;
     [super dealloc];
 }
 
@@ -126,8 +124,8 @@ static const char DeallocKVOKey;
  release the dispatch_semaphore
  */
 - (void)dealloc{
-    [self.kvoObjectSet release];
-    dispatch_release(self.kvoLock);
+    self.kvoObjectSet = nil;
+    self.kvoLock = nil;
     [super dealloc];
 }
 
@@ -195,7 +193,7 @@ static const char DeallocKVOKey;
     if (!objectContainer) {
         objectContainer = [KVOObjectContainer new];
         objc_setAssociatedObject(self, &DeallocKVOKey, objectContainer, OBJC_ASSOCIATION_RETAIN);
-        [objectContainer release];
+//        [objectContainer release];
     }
 
     [objectContainer checkAddKVOItemExist:item existResult:^{
@@ -207,11 +205,11 @@ static const char DeallocKVOKey;
     if (!observerContainer) {
         observerContainer = [KVOObjectContainer new];
         objc_setAssociatedObject(observer, &DeallocKVOKey, observerContainer, OBJC_ASSOCIATION_RETAIN);
-        [observerContainer release];
+//        [observerContainer release];
     }
     [observerContainer checkAddKVOItemExist:item existResult:nil];
 
-    [item release];
+//    [item release];
     // clean the self and observer
     [self tfy_crashswizzleDeallocIfNeeded:self.class];
     [self tfy_crashswizzleDeallocIfNeeded:observer.class];
@@ -270,12 +268,10 @@ static const char DeallocKVOKey;
             resultItem.keyPath = nil;
             [kvoObjectSet removeObject:resultItem];
         }
-        /*
-         * Fix memory leak,
-         * bug link:https://github.com/jezzmemo/TFYCrashException/issues/131
-         */
-        [targetItem release];
-        [set release];
+        targetItem = nil;
+        set = nil;
+//        [targetItem release];
+//        [set release];
     }];
 }
 
