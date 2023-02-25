@@ -8,7 +8,6 @@
 #import "NSObject+Hook.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
-#import <libkern/OSAtomic.h>
 
 typedef IMP (^TFYCrashSWizzleImpProvider)(void);
 

@@ -3,13 +3,13 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYCrashSDK"
 
-  spec.version      = "1.0.9"
+  spec.version      = "1.1.0"
 
-  spec.summary      = "完美处理项目闪退问题，后期会持续更新。最低iOS支持iOS12系统以上"
+  spec.summary      = "完美处理项目闪退问题，后期会持续更新。最低iOS支持iOS12系统以上."
 
  
   spec.description  = <<-DESC
-  完美处理项目闪退问题，后期会持续更新。最低iOS支持iOS12系统以上
+                       完美处理项目闪退问题，后期会持续更新。最低iOS支持iOS12系统以上.
                    DESC
 
   spec.homepage     = "https://github.com/13662049573/TFYCrashException"
@@ -29,7 +29,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/13662049573/TFYCrashException.git", :tag => "#{spec.version}" }
 
   spec.subspec 'TFYCrashSDK' do |sss|
-    sss.public_header_files = "TFYCrashException/TFYCrashSDK/TFYCrashSDK.h"
+    sss.source_files = "TFYCrashException/TFYCrashSDK/TFYCrashSDK.h"
     
     sss.subspec 'TFYMain' do |ss|
       ss.requires_arc = true
