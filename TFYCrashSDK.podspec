@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYCrashSDK"
 
-  spec.version      = "1.1.4"
+  spec.version      = "1.1.5"
 
   spec.summary      = "完美处理项目闪退问题，后期会持续更新。最低iOS支持iOS12系统以上."
 
@@ -28,8 +28,7 @@ Pod::Spec.new do |spec|
   spec.subspec 'TFYCrashSDK' do |sss|
     sss.public_header_files = "TFYCrashException/TFYCrashSDK/TFYCrashSDK.h"
     sss.source_files  = "TFYCrashException/TFYCrashSDK/TFYCrash/**/*.{h,m}"
+    sss.requires_arc = true
   end
-
-  spec.requires_arc = true
 
 end
