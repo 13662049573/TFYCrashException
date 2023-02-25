@@ -14,26 +14,29 @@ TFYCrashSYNTH_DUMMY_CLASS(NSMutableArray_MutableArrayHook)
 @implementation NSMutableArray (MutableArrayHook)
 
 + (void)tfy_swizzleNSMutableArray{
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(objectAtIndex:), @selector(hookObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(subarrayWithRange:), @selector(hookSubarrayWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(objectAtIndexedSubscript:), @selector(hookObjectAtIndexedSubscript:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(objectAtIndex:) swizzleSelector:@selector(hookObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(subarrayWithRange:) swizzleSelector:@selector(hookSubarrayWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(objectAtIndexedSubscript:) swizzleSelector:@selector(hookObjectAtIndexedSubscript:)];
     
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(addObject:), @selector(hookAddObject:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(insertObject:atIndex:), @selector(hookInsertObject:atIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(removeObjectAtIndex:), @selector(hookRemoveObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(replaceObjectAtIndex:withObject:), @selector(hookReplaceObjectAtIndex:withObject:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(setObject:atIndexedSubscript:), @selector(hookSetObject:atIndexedSubscript:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(removeObjectsInRange:), @selector(hookRemoveObjectsInRange:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(addObject:) swizzleSelector:@selector(hookAddObject:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(insertObject:atIndex:) swizzleSelector:@selector(hookInsertObject:atIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(removeObjectAtIndex:) swizzleSelector:@selector(hookRemoveObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(replaceObjectAtIndex:withObject:) swizzleSelector:@selector(hookReplaceObjectAtIndex:withObject:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(setObject:atIndexedSubscript:) swizzleSelector:@selector(hookSetObject:atIndexedSubscript:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayM") originSelector:@selector(removeObjectsInRange:) swizzleSelector:@selector(hookRemoveObjectsInRange:)];
     
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFArray"), @selector(objectAtIndex:), @selector(hookObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFArray"), @selector(subarrayWithRange:), @selector(hookSubarrayWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFArray"), @selector(objectAtIndexedSubscript:), @selector(hookObjectAtIndexedSubscript:));
+
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(objectAtIndex:) swizzleSelector:@selector(hookObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(subarrayWithRange:) swizzleSelector:@selector(hookSubarrayWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(objectAtIndexedSubscript:) swizzleSelector:@selector(hookObjectAtIndexedSubscript:)];
     
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFArray"), @selector(addObject:), @selector(hookAddObject:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFArray"), @selector(insertObject:atIndex:), @selector(hookInsertObject:atIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFArray"), @selector(removeObjectAtIndex:), @selector(hookRemoveObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFArray"), @selector(replaceObjectAtIndex:withObject:), @selector(hookReplaceObjectAtIndex:withObject:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFArray"), @selector(removeObjectsInRange:), @selector(hookRemoveObjectsInRange:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(addObject:) swizzleSelector:@selector(hookAddObject:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(insertObject:atIndex:) swizzleSelector:@selector(hookInsertObject:atIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(removeObjectAtIndex:) swizzleSelector:@selector(hookRemoveObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(replaceObjectAtIndex:withObject:) swizzleSelector:@selector(hookReplaceObjectAtIndex:withObject:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(setObject:atIndexedSubscript:) swizzleSelector:@selector(hookSetObject:atIndexedSubscript:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFArray") originSelector:@selector(removeObjectsInRange:) swizzleSelector:@selector(hookRemoveObjectsInRange:)];
+    
 }
 
 - (void) hookAddObject:(id)anObject {

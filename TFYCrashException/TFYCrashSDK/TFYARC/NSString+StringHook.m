@@ -19,20 +19,21 @@ TFYCrashSYNTH_DUMMY_CLASS(NSString_StringHook)
     [NSString tfy_crashswizzleClassMethod:@selector(stringWithCString:encoding:) withSwizzleMethod:@selector(hookStringWithCString:encoding:)];
     
     //NSPlaceholderString
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"NSPlaceholderString"), @selector(initWithCString:encoding:), @selector(hookInitWithCString:encoding:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"NSPlaceholderString"), @selector(initWithString:), @selector(hookInitWithString:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"NSPlaceholderString") originSelector:@selector(initWithCString:encoding:) swizzleSelector:@selector(hookInitWithCString:encoding:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"NSPlaceholderString") originSelector:@selector(initWithString:) swizzleSelector:@selector(hookInitWithString:)];
     
     //_NSCFConstantString
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFConstantString"), @selector(substringFromIndex:), @selector(hookSubstringFromIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFConstantString"), @selector(substringToIndex:), @selector(hookSubstringToIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFConstantString"), @selector(substringWithRange:), @selector(hookSubstringWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFConstantString"), @selector(rangeOfString:options:range:locale:), @selector(hookRangeOfString:options:range:locale:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFConstantString") originSelector:@selector(substringFromIndex:) swizzleSelector:@selector(hookSubstringFromIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFConstantString") originSelector:@selector(substringToIndex:) swizzleSelector:@selector(hookSubstringToIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFConstantString") originSelector:@selector(substringWithRange:) swizzleSelector:@selector(hookSubstringWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFConstantString") originSelector:@selector(rangeOfString:options:range:locale:) swizzleSelector:@selector(hookRangeOfString:options:range:locale:)];
+    
     
     //NSTaggedPointerString
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"NSTaggedPointerString"), @selector(substringFromIndex:), @selector(hookSubstringFromIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"NSTaggedPointerString"), @selector(substringToIndex:), @selector(hookSubstringToIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"NSTaggedPointerString"), @selector(substringWithRange:), @selector(hookSubstringWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"NSTaggedPointerString"), @selector(rangeOfString:options:range:locale:), @selector(hookRangeOfString:options:range:locale:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"NSTaggedPointerString") originSelector:@selector(substringFromIndex:) swizzleSelector:@selector(hookSubstringFromIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"NSTaggedPointerString") originSelector:@selector(substringToIndex:) swizzleSelector:@selector(hookSubstringToIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"NSTaggedPointerString") originSelector:@selector(substringWithRange:) swizzleSelector:@selector(hookSubstringWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"NSTaggedPointerString") originSelector:@selector(rangeOfString:options:range:locale:) swizzleSelector:@selector(hookRangeOfString:options:range:locale:)];
 }
 
 + (NSString*) hookStringWithUTF8String:(const char *)nullTerminatedCString{

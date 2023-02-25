@@ -17,12 +17,12 @@ TFYCrashSYNTH_DUMMY_CLASS(NSMutableString_MutableStringHook)
 
 + (void)tfy_swizzleNSMutableString{
     //__NSCFString
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFString"), @selector(appendString:), @selector(hookAppendString:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFString"), @selector(insertString:atIndex:), @selector(hookInsertString:atIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFString"), @selector(deleteCharactersInRange:), @selector(hookDeleteCharactersInRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFString"), @selector(substringFromIndex:), @selector(hookSubstringFromIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFString"), @selector(substringToIndex:), @selector(hookSubstringToIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSCFString"), @selector(substringWithRange:), @selector(hookSubstringWithRange:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFString") originSelector: @selector(appendString:) swizzleSelector:@selector(hookAppendString:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFString") originSelector: @selector(insertString:atIndex:) swizzleSelector:@selector(hookInsertString:atIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFString") originSelector: @selector(deleteCharactersInRange:) swizzleSelector:@selector(hookDeleteCharactersInRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFString") originSelector: @selector(substringFromIndex:) swizzleSelector:@selector(hookSubstringFromIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFString") originSelector: @selector(substringToIndex:) swizzleSelector:@selector(hookSubstringToIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSCFString") originSelector: @selector(substringWithRange:) swizzleSelector:@selector(hookSubstringWithRange:)];
 }
 
 - (void) hookAppendString:(NSString *)aString{

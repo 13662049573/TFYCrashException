@@ -52,8 +52,7 @@
 
 #pragma mark - Action
 
-- (void)startGuardAction{
-    TFYCrashException.exceptionWhenTerminate = NO;
+- (void)startGuardAction {
     [TFYCrashException registerExceptionHandle:self];
 }
 

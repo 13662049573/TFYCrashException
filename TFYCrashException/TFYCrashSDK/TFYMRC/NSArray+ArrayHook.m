@@ -19,34 +19,36 @@ TFYCrashSYNTH_DUMMY_CLASS(NSArray_ArrayHook)
     [NSArray tfy_crashswizzleClassMethod:@selector(arrayWithObjects:count:) withSwizzleMethod:@selector(hookArrayWithObjects:count:)];
     
     /* __NSArray0 */
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArray0"), @selector(objectAtIndex:), @selector(hookObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArray0"), @selector(subarrayWithRange:), @selector(hookSubarrayWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArray0"), @selector(objectAtIndexedSubscript:), @selector(hookObjectAtIndexedSubscript:));
-    
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArray0") originSelector:@selector(objectAtIndex:) swizzleSelector:@selector(hookObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArray0") originSelector:@selector(subarrayWithRange:) swizzleSelector:@selector(hookSubarrayWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArray0") originSelector:@selector(objectAtIndexedSubscript:) swizzleSelector:@selector(hookObjectAtIndexedSubscript:)];
+        
     /* __NSArrayI */
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayI"), @selector(objectAtIndex:), @selector(hookObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayI"), @selector(subarrayWithRange:), @selector(hookSubarrayWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayI"), @selector(objectAtIndexedSubscript:), @selector(hookObjectAtIndexedSubscript:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayI") originSelector:@selector(objectAtIndex:) swizzleSelector:@selector(hookObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayI") originSelector:@selector(subarrayWithRange:) swizzleSelector:@selector(hookSubarrayWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayI") originSelector:@selector(objectAtIndexedSubscript:) swizzleSelector:@selector(hookObjectAtIndexedSubscript:)];
     
     /* __NSArrayI_Transfer */
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayI_Transfer"), @selector(objectAtIndex:), @selector(hookObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayI_Transfer"), @selector(subarrayWithRange:), @selector(hookSubarrayWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayI_Transfer"), @selector(objectAtIndexedSubscript:), @selector(hookObjectAtIndexedSubscript:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayI_Transfer") originSelector:@selector(objectAtIndex:) swizzleSelector:@selector(hookObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayI_Transfer") originSelector:@selector(subarrayWithRange:) swizzleSelector:@selector(hookSubarrayWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayI_Transfer") originSelector:@selector(objectAtIndexedSubscript:) swizzleSelector:@selector(hookObjectAtIndexedSubscript:)];
     
     /* above iOS10  __NSSingleObjectArrayI */
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSSingleObjectArrayI"), @selector(objectAtIndex:), @selector(hookObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSSingleObjectArrayI"), @selector(subarrayWithRange:), @selector(hookSubarrayWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSSingleObjectArrayI"), @selector(objectAtIndexedSubscript:), @selector(hookObjectAtIndexedSubscript:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSSingleObjectArrayI") originSelector:@selector(objectAtIndex:) swizzleSelector:@selector(hookObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSSingleObjectArrayI") originSelector:@selector(subarrayWithRange:) swizzleSelector:@selector(hookSubarrayWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSSingleObjectArrayI") originSelector:@selector(objectAtIndexedSubscript:) swizzleSelector:@selector(hookObjectAtIndexedSubscript:)];
     
     /* __NSFrozenArrayM */
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSFrozenArrayM"), @selector(objectAtIndex:), @selector(hookObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSFrozenArrayM"), @selector(subarrayWithRange:), @selector(hookSubarrayWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSFrozenArrayM"), @selector(objectAtIndexedSubscript:), @selector(hookObjectAtIndexedSubscript:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSFrozenArrayM") originSelector:@selector(objectAtIndex:) swizzleSelector:@selector(hookObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSFrozenArrayM") originSelector:@selector(subarrayWithRange:) swizzleSelector:@selector(hookSubarrayWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSFrozenArrayM") originSelector:@selector(objectAtIndexedSubscript:) swizzleSelector:@selector(hookObjectAtIndexedSubscript:)];
     
+
     /* __NSArrayReversed */
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayReversed"), @selector(objectAtIndex:), @selector(hookObjectAtIndex:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayReversed"), @selector(subarrayWithRange:), @selector(hookSubarrayWithRange:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSArrayReversed"), @selector(objectAtIndexedSubscript:), @selector(hookObjectAtIndexedSubscript:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayReversed") originSelector:@selector(objectAtIndex:) swizzleSelector:@selector(hookObjectAtIndex:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayReversed") originSelector:@selector(subarrayWithRange:) swizzleSelector:@selector(hookSubarrayWithRange:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSArrayReversed") originSelector:@selector(objectAtIndexedSubscript:) swizzleSelector:@selector(hookObjectAtIndexedSubscript:)];
+
 }
 
 + (instancetype) hookArrayWithObject:(id)anObject

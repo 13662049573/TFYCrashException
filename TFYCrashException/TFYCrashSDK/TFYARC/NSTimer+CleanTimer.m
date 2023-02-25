@@ -65,7 +65,7 @@
 @implementation NSTimer (CleanTimer)
 
 + (void)tfy_swizzleNSTimer{
-    tfy_crashswizzleClassMethod([NSTimer class], @selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:), @selector(hookScheduledTimerWithTimeInterval:target:selector:userInfo:repeats:));
+    [self tfy_crashswizzleClassMethod:NSTimer.class originSelector:@selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) swizzleSelector:@selector(hookScheduledTimerWithTimeInterval:target:selector:userInfo:repeats:)];
 }
 
 + (NSTimer*)hookScheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo{

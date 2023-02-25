@@ -15,12 +15,6 @@ typedef void (*TFYCrashSwizzleOriginalIMP)(void /* id, SEL, ... */ );
 
 typedef id _Nullable (^TFYCrashSwizzledIMPBlock)(TFYCrashSwizzleObject* swizzleInfo);
 
-__attribute__((overloadable)) void tfy_crashswizzleClassMethod(Class cls, SEL originSelector, SEL swizzleSelector);
-
-__attribute__((overloadable)) void tfy_crashswizzleInstanceMethod(Class cls, SEL originSelector, SEL swizzleSelector);
-
-__attribute__((overloadable)) void tfy_crashswizzleDeallocIfNeeded(Class class);
-
 @interface TFYCrashSwizzleObject : NSObject
 
 - (TFYCrashSwizzleOriginalIMP)getOriginalImplementation;
@@ -36,6 +30,12 @@ __attribute__((overloadable)) void tfy_crashswizzleDeallocIfNeeded(Class class);
 - (void)tfy_crashswizzleInstanceMethod:(SEL)originSelector withSwizzleMethod:(SEL)swizzleSelector;
 
 - (void)tfy_crashswizzleInstanceMethod:(SEL)originSelector withSwizzledBlock:(TFYCrashSwizzledIMPBlock)swizzledBlock;
+
+- (void)tfy_crashswizzleClassMethod:(Class)cls originSelector:(SEL)originSelector swizzleSelector:(SEL)swizzleSelector;
+
+- (void)tfy_crashswizzleInstanceMethod:(Class)cls originSelector:(SEL)originSelector swizzleSelector:(SEL)swizzleSelector;
+
+- (void)tfy_crashswizzleDeallocIfNeeded:(Class)cls;
 
 @end
 

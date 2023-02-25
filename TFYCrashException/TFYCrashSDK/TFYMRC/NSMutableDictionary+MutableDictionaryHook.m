@@ -15,9 +15,9 @@ TFYCrashSYNTH_DUMMY_CLASS(NSMutableDictionary_MutableDictionaryHook)
 @implementation NSMutableDictionary (MutableDictionaryHook)
 
 + (void)tfy_swizzleNSMutableDictionary{
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKey:), @selector(hookSetObject:forKey:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(removeObjectForKey:), @selector(hookRemoveObjectForKey:));
-    tfy_crashswizzleInstanceMethod(NSClassFromString(@"__NSDictionaryM"), @selector(setObject:forKeyedSubscript:), @selector(hookSetObject:forKeyedSubscript:));
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSDictionaryM") originSelector:@selector(setObject:forKey:) swizzleSelector: @selector(hookSetObject:forKey:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSDictionaryM") originSelector:@selector(removeObjectForKey:) swizzleSelector:@selector(hookRemoveObjectForKey:)];
+    [self tfy_crashswizzleInstanceMethod:NSClassFromString(@"__NSDictionaryM") originSelector:@selector(setObject:forKeyedSubscript:) swizzleSelector:@selector(hookSetObject:forKeyedSubscript:)];
 }
 
 - (void) hookSetObject:(id)object forKey:(id)key {

@@ -20,8 +20,8 @@ TFYCrashSYNTH_DUMMY_CLASS(NSMutableSet_MutableSetHook)
     NSMutableSet* instanceObject = [NSMutableSet new];
     Class cls =  object_getClass(instanceObject);
     
-    tfy_crashswizzleInstanceMethod(cls,@selector(addObject:), @selector(hookAddObject:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(removeObject:), @selector(hookRemoveObject:));
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(addObject:) swizzleSelector:@selector(hookAddObject:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(removeObject:) swizzleSelector:@selector(hookRemoveObject:)];
 }
 
 - (void) hookAddObject:(id)object {

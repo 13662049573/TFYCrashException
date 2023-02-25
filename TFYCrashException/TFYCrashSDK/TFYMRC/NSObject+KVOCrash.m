@@ -165,10 +165,11 @@ static const char DeallocKVOKey;
 @implementation NSObject (KVOCrash)
 
 + (void)tfy_swizzleKVOCrash{
-    tfy_crashswizzleInstanceMethod([self class], @selector(addObserver:forKeyPath:options:context:), @selector(hookAddObserver:forKeyPath:options:context:));
-    tfy_crashswizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:), @selector(hookRemoveObserver:forKeyPath:));
-    tfy_crashswizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:context:), @selector(hookRemoveObserver:forKeyPath:context:));
-    tfy_crashswizzleInstanceMethod([self class], @selector(observeValueForKeyPath:ofObject:change:context:), @selector(hookObserveValueForKeyPath:ofObject:change:context:));
+    [self tfy_crashswizzleInstanceMethod:self.class originSelector:@selector(addObserver:forKeyPath:options:context:) swizzleSelector:@selector(hookAddObserver:forKeyPath:options:context:)];
+    [self tfy_crashswizzleInstanceMethod:self.class originSelector:@selector(removeObserver:forKeyPath:) swizzleSelector:@selector(hookRemoveObserver:forKeyPath:)];
+    [self tfy_crashswizzleInstanceMethod:self.class originSelector:@selector(removeObserver:forKeyPath:context:) swizzleSelector:@selector(hookRemoveObserver:forKeyPath:context:)];
+    [self tfy_crashswizzleInstanceMethod:self.class originSelector:@selector(observeValueForKeyPath:ofObject:change:context:) swizzleSelector:@selector(hookObserveValueForKeyPath:ofObject:change:context:)];
+   
 }
 
 - (void)hookAddObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context{
@@ -212,8 +213,8 @@ static const char DeallocKVOKey;
 
     [item release];
     // clean the self and observer
-    tfy_crashswizzleDeallocIfNeeded(self.class);
-    tfy_crashswizzleDeallocIfNeeded(observer.class);
+    [self tfy_crashswizzleDeallocIfNeeded:self.class];
+    [self tfy_crashswizzleDeallocIfNeeded:observer.class];
 }
 
 - (void)hookRemoveObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void*)context{

@@ -20,15 +20,15 @@ TFYCrashSYNTH_DUMMY_CLASS(NSMutableAttributedString_MutableAttributedStringHook)
     NSMutableAttributedString* instanceObject = [NSMutableAttributedString new];
     Class cls =  object_getClass(instanceObject);
     
-    tfy_crashswizzleInstanceMethod(cls,@selector(initWithString:), @selector(hookInitWithString:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(initWithString:attributes:), @selector(hookInitWithString:attributes:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(addAttribute:value:range:), @selector(hookAddAttribute:value:range:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(addAttributes:range:), @selector(hookAddAttributes:range:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(setAttributes:range:), @selector(hookSetAttributes:range:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(removeAttribute:range:), @selector(hookRemoveAttribute:range:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(deleteCharactersInRange:), @selector(hookDeleteCharactersInRange:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(replaceCharactersInRange:withString:), @selector(hookReplaceCharactersInRange:withString:));
-    tfy_crashswizzleInstanceMethod(cls,@selector(replaceCharactersInRange:withAttributedString:), @selector(hookReplaceCharactersInRange:withAttributedString:));
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(initWithString:) swizzleSelector:@selector(hookInitWithString:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(initWithString:attributes:) swizzleSelector:@selector(hookInitWithString:attributes:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(addAttribute:value:range:) swizzleSelector:@selector(hookAddAttribute:value:range:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(addAttributes:range:) swizzleSelector:@selector(hookAddAttributes:range:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(setAttributes:range:) swizzleSelector:@selector(hookSetAttributes:range:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(removeAttribute:range:) swizzleSelector:@selector(hookRemoveAttribute:range:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(deleteCharactersInRange:) swizzleSelector:@selector(hookDeleteCharactersInRange:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(replaceCharactersInRange:withString:) swizzleSelector:@selector(hookReplaceCharactersInRange:withString:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(replaceCharactersInRange:withAttributedString:) swizzleSelector:@selector(hookReplaceCharactersInRange:withAttributedString:)];
 }
 
 - (id)hookInitWithString:(NSString*)str{

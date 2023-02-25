@@ -19,11 +19,11 @@ TFYCrashSYNTH_DUMMY_CLASS(NSAttributedString_AttributedStringHook)
     NSAttributedString* instanceObject = [NSAttributedString new];
     Class cls =  object_getClass(instanceObject);
     
-    tfy_crashswizzleInstanceMethod(cls, @selector(initWithString:), @selector(hookInitWithString:));
-    tfy_crashswizzleInstanceMethod(cls, @selector(attributedSubstringFromRange:), @selector(hookAttributedSubstringFromRange:));
-    tfy_crashswizzleInstanceMethod(cls, @selector(attribute:atIndex:effectiveRange:), @selector(hookAttribute:atIndex:effectiveRange:));
-    tfy_crashswizzleInstanceMethod(cls, @selector(enumerateAttribute:inRange:options:usingBlock:), @selector(hookEnumerateAttribute:inRange:options:usingBlock:));
-    tfy_crashswizzleInstanceMethod(cls, @selector(enumerateAttributesInRange:options:usingBlock:), @selector(hookEnumerateAttributesInRange:options:usingBlock:));
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(initWithString:) swizzleSelector:@selector(hookInitWithString:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(attributedSubstringFromRange:) swizzleSelector:@selector(hookAttributedSubstringFromRange:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(attribute:atIndex:effectiveRange:) swizzleSelector:@selector(hookAttribute:atIndex:effectiveRange:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(enumerateAttribute:inRange:options:usingBlock:) swizzleSelector:@selector(hookEnumerateAttribute:inRange:options:usingBlock:)];
+    [self tfy_crashswizzleInstanceMethod:cls originSelector:@selector(enumerateAttributesInRange:options:usingBlock:) swizzleSelector:@selector(hookEnumerateAttributesInRange:options:usingBlock:)];
 }
 
 - (id)hookInitWithString:(NSString*)str{
