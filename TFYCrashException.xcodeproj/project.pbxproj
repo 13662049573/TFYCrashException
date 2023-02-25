@@ -213,33 +213,12 @@
 			children = (
 				3680FC4C29A8C82B00A9C5BF /* TFYCrashSDK.h */,
 				362CBE2429A9BE1800085921 /* TFYHook */,
-				362CBDE129A8A31B00085921 /* TFYARC */,
 				362CBDE229A8A31C00085921 /* TFYCrash */,
-				362CBDDF29A8A31A00085921 /* TFYMRC */,
 			);
 			path = TFYCrashSDK;
 			sourceTree = "<group>";
 		};
-		362CBDDF29A8A31A00085921 /* TFYMRC */ = {
-			isa = PBXGroup;
-			children = (
-				362CBE0729A8A3BE00085921 /* NSArray+ArrayHook.h */,
-				362CBE0329A8A3BD00085921 /* NSArray+ArrayHook.m */,
-				362CBE0829A8A3BF00085921 /* NSDictionary+DictionaryHook.h */,
-				362CBE0A29A8A3C000085921 /* NSDictionary+DictionaryHook.m */,
-				362CBE0D29A8A3C100085921 /* NSMutableArray+MutableArrayHook.h */,
-				362CBE0429A8A3BD00085921 /* NSMutableArray+MutableArrayHook.m */,
-				362CBE0529A8A3BE00085921 /* NSMutableDictionary+MutableDictionaryHook.h */,
-				362CBE0229A8A3BC00085921 /* NSMutableDictionary+MutableDictionaryHook.m */,
-				362CBE0929A8A3BF00085921 /* NSObject+KVOCrash.h */,
-				362CBE0629A8A3BE00085921 /* NSObject+KVOCrash.m */,
-				362CBE0C29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.h */,
-				362CBE0B29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.m */,
-			);
-			path = TFYMRC;
-			sourceTree = "<group>";
-		};
-		362CBDE129A8A31B00085921 /* TFYARC */ = {
+		362CBDE229A8A31C00085921 /* TFYCrash */ = {
 			isa = PBXGroup;
 			children = (
 				362CBDF029A8A37E00085921 /* NSAttributedString+AttributedStringHook.h */,
@@ -258,13 +237,18 @@
 				362CBDF129A8A37E00085921 /* NSString+StringHook.m */,
 				362CBDEB29A8A37C00085921 /* NSTimer+CleanTimer.h */,
 				362CBDF529A8A38000085921 /* NSTimer+CleanTimer.m */,
-			);
-			path = TFYARC;
-			sourceTree = "<group>";
-		};
-		362CBDE229A8A31C00085921 /* TFYCrash */ = {
-			isa = PBXGroup;
-			children = (
+				362CBE0729A8A3BE00085921 /* NSArray+ArrayHook.h */,
+				362CBE0329A8A3BD00085921 /* NSArray+ArrayHook.m */,
+				362CBE0829A8A3BF00085921 /* NSDictionary+DictionaryHook.h */,
+				362CBE0A29A8A3C000085921 /* NSDictionary+DictionaryHook.m */,
+				362CBE0D29A8A3C100085921 /* NSMutableArray+MutableArrayHook.h */,
+				362CBE0429A8A3BD00085921 /* NSMutableArray+MutableArrayHook.m */,
+				362CBE0529A8A3BE00085921 /* NSMutableDictionary+MutableDictionaryHook.h */,
+				362CBE0229A8A3BC00085921 /* NSMutableDictionary+MutableDictionaryHook.m */,
+				362CBE0929A8A3BF00085921 /* NSObject+KVOCrash.h */,
+				362CBE0629A8A3BE00085921 /* NSObject+KVOCrash.m */,
+				362CBE0C29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.h */,
+				362CBE0B29A8A3C000085921 /* NSObject+UnrecognizedSelectorHook.m */,
 				362CBE1429A8A43900085921 /* TFYCrashExceptionProxy.h */,
 				362CBE1529A8A43900085921 /* TFYCrashExceptionProxy.m */,
 				362CBE1729A8A44D00085921 /* TFYCrashException.h */,
