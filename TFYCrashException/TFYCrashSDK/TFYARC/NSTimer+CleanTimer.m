@@ -85,7 +85,6 @@
     timerObject.timer = timer;
     
     return timer;
-    
 }
 
 @end

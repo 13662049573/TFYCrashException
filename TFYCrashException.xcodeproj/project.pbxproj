@@ -214,7 +214,7 @@
 				3680FC4C29A8C82B00A9C5BF /* TFYCrashSDK.h */,
 				362CBE2429A9BE1800085921 /* TFYHook */,
 				362CBDE129A8A31B00085921 /* TFYARC */,
-				362CBDE229A8A31C00085921 /* TFYMain */,
+				362CBDE229A8A31C00085921 /* TFYCrash */,
 				362CBDDF29A8A31A00085921 /* TFYMRC */,
 			);
 			path = TFYCrashSDK;
@@ -262,7 +262,7 @@
 			path = TFYARC;
 			sourceTree = "<group>";
 		};
-		362CBDE229A8A31C00085921 /* TFYMain */ = {
+		362CBDE229A8A31C00085921 /* TFYCrash */ = {
 			isa = PBXGroup;
 			children = (
 				362CBE1429A8A43900085921 /* TFYCrashExceptionProxy.h */,
@@ -271,7 +271,7 @@
 				362CBE1829A8A44D00085921 /* TFYCrashException.m */,
 				362CBE1A29A8A48500085921 /* TFYCrashExceptionMacros.h */,
 			);
-			path = TFYMain;
+			path = TFYCrash;
 			sourceTree = "<group>";
 		};
 		362CBE2429A9BE1800085921 /* TFYHook */ = {
