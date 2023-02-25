@@ -212,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				3680FC4C29A8C82B00A9C5BF /* TFYCrashSDK.h */,
+				362CBE2429A9BE1800085921 /* TFYHook */,
 				362CBDE129A8A31B00085921 /* TFYARC */,
 				362CBDE229A8A31C00085921 /* TFYMain */,
 				362CBDDF29A8A31A00085921 /* TFYMRC */,
@@ -269,12 +270,19 @@
 				362CBE1729A8A44D00085921 /* TFYCrashException.h */,
 				362CBE1829A8A44D00085921 /* TFYCrashException.m */,
 				362CBE1A29A8A48500085921 /* TFYCrashExceptionMacros.h */,
+			);
+			path = TFYMain;
+			sourceTree = "<group>";
+		};
+		362CBE2429A9BE1800085921 /* TFYHook */ = {
+			isa = PBXGroup;
+			children = (
 				362CBDE429A8A34F00085921 /* NSObject+DeallocBlock.h */,
 				362CBDE529A8A35000085921 /* NSObject+DeallocBlock.m */,
 				3680FC4D29A8D36C00A9C5BF /* NSObject+Hook.h */,
 				3680FC4E29A8D36C00A9C5BF /* NSObject+Hook.m */,
 			);
-			path = TFYMain;
+			path = TFYHook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
