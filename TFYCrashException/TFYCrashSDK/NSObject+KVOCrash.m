@@ -51,12 +51,11 @@ static const char DeallocKVOKey;
     return [self.observer hash] ^ [self.whichObject hash] ^ [self.keyPath hash];
 }
 
-- (void)dealloc{
+- (void)dealloc {
     self.observer = nil;
     self.whichObject = nil;
     self.context = nil;
     self.keyPath = nil;
-    [super dealloc];
 }
 
 @end
@@ -126,7 +125,6 @@ static const char DeallocKVOKey;
 - (void)dealloc{
     self.kvoObjectSet = nil;
     self.kvoLock = nil;
-    [super dealloc];
 }
 
 /// Clean the kvo info and set the item property nil,break the reference
@@ -270,8 +268,6 @@ static const char DeallocKVOKey;
         }
         targetItem = nil;
         set = nil;
-//        [targetItem release];
-//        [set release];
     }];
 }
 
