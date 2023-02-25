@@ -212,15 +212,10 @@
 			isa = PBXGroup;
 			children = (
 				3680FC4C29A8C82B00A9C5BF /* TFYCrashSDK.h */,
-				362CBE2429A9BE1800085921 /* TFYHook */,
-				362CBDE229A8A31C00085921 /* TFYCrash */,
-			);
-			path = TFYCrashSDK;
-			sourceTree = "<group>";
-		};
-		362CBDE229A8A31C00085921 /* TFYCrash */ = {
-			isa = PBXGroup;
-			children = (
+				362CBDE429A8A34F00085921 /* NSObject+DeallocBlock.h */,
+				362CBDE529A8A35000085921 /* NSObject+DeallocBlock.m */,
+				3680FC4D29A8D36C00A9C5BF /* NSObject+Hook.h */,
+				3680FC4E29A8D36C00A9C5BF /* NSObject+Hook.m */,
 				362CBDF029A8A37E00085921 /* NSAttributedString+AttributedStringHook.h */,
 				362CBDF229A8A37F00085921 /* NSAttributedString+AttributedStringHook.m */,
 				362CBDEE29A8A37D00085921 /* NSMutableAttributedString+MutableAttributedStringHook.h */,
@@ -255,18 +250,7 @@
 				362CBE1829A8A44D00085921 /* TFYCrashException.m */,
 				362CBE1A29A8A48500085921 /* TFYCrashExceptionMacros.h */,
 			);
-			path = TFYCrash;
-			sourceTree = "<group>";
-		};
-		362CBE2429A9BE1800085921 /* TFYHook */ = {
-			isa = PBXGroup;
-			children = (
-				362CBDE429A8A34F00085921 /* NSObject+DeallocBlock.h */,
-				362CBDE529A8A35000085921 /* NSObject+DeallocBlock.m */,
-				3680FC4D29A8D36C00A9C5BF /* NSObject+Hook.h */,
-				3680FC4E29A8D36C00A9C5BF /* NSObject+Hook.m */,
-			);
-			path = TFYHook;
+			path = TFYCrashSDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
