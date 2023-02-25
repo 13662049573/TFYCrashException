@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYCrashSDK"
 
-  spec.version      = "1.2.1"
+  spec.version      = "1.2.2"
 
   spec.summary      = "完美处理项目闪退问题，后期会持续更新。最低iOS支持iOS12系统以上."
 
@@ -20,8 +20,6 @@ Pod::Spec.new do |spec|
   
   spec.ios.deployment_target = "12.0"
   spec.osx.deployment_target = "11.0"
-  spec.watchos.deployment_target = "2.0"
-  spec.tvos.deployment_target = "12.0"
 
   spec.source       = { :git => "https://github.com/13662049573/TFYCrashException.git", :tag => "#{spec.version}" }
 
