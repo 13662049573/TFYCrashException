@@ -5,10 +5,9 @@
 //  Created by 田风有 on 2023/2/24.
 //
 
+#import "NSTimer+CleanTimer.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
-
-#import "NSTimer+CleanTimer.h"
 #import "NSObject+Hook.h"
 #import "TFYCrashExceptionProxy.h"
 
