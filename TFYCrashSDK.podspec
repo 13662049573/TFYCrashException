@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "TFYCrashSDK"
 
-  spec.version      = "1.1.9"
+  spec.version      = "1.2.0"
 
   spec.summary      = "完美处理项目闪退问题，后期会持续更新。最低iOS支持iOS12系统以上."
 
