@@ -34,7 +34,7 @@ Pod::Spec.new do |spec|
     sss.subspec 'TFYARC' do |ss|
       ss.requires_arc = true
       ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYARC/*.{h,m}"
-      ss.dependency 'TFYCrashSDK/TFYMain'
+      ss.dependency 'TFYCrashException/TFYCrashSDK/TFYMain'
     end
   
     sss.subspec 'TFYMain' do |ss|
@@ -45,7 +45,7 @@ Pod::Spec.new do |spec|
     sss.subspec 'TFYMRC' do |ss|
       ss.requires_arc = false
       ss.source_files  = "TFYCrashException/TFYCrashSDK/TFYMRC/*.{h,m}"
-      ss.dependency 'TFYCrashSDK/TFYMain'
+      ss.dependency 'TFYCrashException/TFYCrashSDK/TFYMain'
     end
 
   end
