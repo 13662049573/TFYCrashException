@@ -45,7 +45,7 @@
     [self.view addSubview:textField];
 }
 
-- (void)handleCrashException:(NSString*)exceptionMessage extraInfo:(NSDictionary*)info{
+- (void)crashhandleCrashException:(NSString*)exceptionMessage extraInfo:(NSDictionary*)info{
 
     NSLog(@"info============:%@================exceptionMessage======:%@",info,exceptionMessage);
 }
@@ -83,7 +83,7 @@
 
 - (void)testUnrecognizedSelector{
     [self performSelector:@selector(testUndefineSelector)];
-    [self performSelector:@selector(handleCrashException:exceptionCategory:extraInfo:)];
+    [self performSelector:@selector(crashhandleCrashException:exceptionCategory:extraInfo:)];
 }
 
 - (void)testNull{
