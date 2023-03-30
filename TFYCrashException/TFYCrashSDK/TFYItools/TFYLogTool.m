@@ -8,7 +8,7 @@
 #import "TFYLogTool.h"
 
 // 存储所有用户日志的根文件夹 - 内涵所有用户文件夹
-#define TFYSaveLogsDirectoryPath     [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/TFYLogs"]
+#define TFYSaveLogsDirectoryPath  [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/TFYLogs"]
 
 // 日志数据模型
 @implementation TFYLogContentModel
