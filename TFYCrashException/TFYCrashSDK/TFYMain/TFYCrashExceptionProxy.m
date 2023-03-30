@@ -8,6 +8,7 @@
 #import "TFYCrashExceptionProxy.h"
 #import <mach-o/dyld.h>
 #import <objc/runtime.h>
+#import "TFYLogTool.h"
 
 __attribute__((overloadable)) void crashhandleCrashException(NSString* exceptionMessage){
     [[TFYCrashExceptionProxy shareExceptionProxy] crashhandleCrashException:exceptionMessage extraInfo:@{}];
@@ -116,12 +117,12 @@ uintptr_t get_slide_address(void) {
     }
     
 #ifdef DEBUG
-    NSLog(@"================================TFYCrashException Start==================================");
-    NSLog(@"TFYCrashException Type:%ld",(long)exceptionCategory);
-    NSLog(@"TFYCrashException Description:%@",exceptionMessage);
-    NSLog(@"TFYCrashException Extra info:%@",info);
-    NSLog(@"TFYCrashException CallStack:%@",callStack);
-    NSLog(@"================================TFYCrashException End====================================");
+    TFYWLogError(@"================================TFYCrashException Start==================================");
+    TFYWLogError(@"TFYCrashException Type:%ld",(long)exceptionCategory);
+    TFYWLogError(@"TFYCrashException Description:%@",exceptionMessage);
+    TFYWLogError(@"TFYCrashException Extra info:%@",info);
+    TFYWLogError(@"TFYCrashException CallStack:%@",callStack);
+    TFYWLogError(@"================================TFYCrashException End====================================");
     if (self.exceptionWhenTerminate) {
         NSAssert(NO, @"");
     }

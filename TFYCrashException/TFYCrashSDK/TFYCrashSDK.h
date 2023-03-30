@@ -9,5 +9,6 @@
 #define TFYCrashSDK_h
 
 #import "TFYCrashExceptionProxy.h"
+#import "TFYLogTool.h"
 
 #endif /* TFYCrashSDK_h */

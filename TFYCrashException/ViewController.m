@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "TFYCrashException.h"
+#import "TFYCrashSDK.h"
 #import <objc/runtime.h>
 #import "PushViewController.h"
 
@@ -47,7 +47,7 @@
 
 - (void)crashhandleCrashException:(NSString*)exceptionMessage extraInfo:(NSDictionary*)info{
 
-    NSLog(@"info============:%@================exceptionMessage======:%@",info,exceptionMessage);
+    NSLog(@"info============:%@================exceptionMessage======:%@===:%@",info,exceptionMessage,[TFYLogTool tfy_getCurrentLogContents]);
 }
 
 #pragma mark - Action

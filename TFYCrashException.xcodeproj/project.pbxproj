@@ -22,6 +22,7 @@
 		362CBE2129A8ACD300085921 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE1B29A8ACD300085921 /* PlayerViewController.m */; };
 		362CBE2229A8ACD300085921 /* KVOObjectDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE1E29A8ACD300085921 /* KVOObjectDemo.m */; };
 		362CBE2329A8ACD300085921 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 362CBE2029A8ACD300085921 /* PushViewController.m */; };
+		36ADC5D129D533EE00929D3A /* TFYLogTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 36ADC5D029D533EE00929D3A /* TFYLogTool.m */; };
 		36C666A129AC35DF00DFA49E /* NSObject+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C666A029AC35DF00DFA49E /* NSObject+Crash.m */; };
 		36C666A429AC423700DFA49E /* NSTimer+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C666A329AC423700DFA49E /* NSTimer+Crash.m */; };
 		36C666A729AC446D00DFA49E /* NSNotificationCenter+Crash.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C666A629AC446D00DFA49E /* NSNotificationCenter+Crash.m */; };
@@ -86,6 +87,8 @@
 		362CBE1F29A8ACD300085921 /* KVOObjectDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOObjectDemo.h; sourceTree = "<group>"; };
 		362CBE2029A8ACD300085921 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		3680FC4C29A8C82B00A9C5BF /* TFYCrashSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYCrashSDK.h; sourceTree = "<group>"; };
+		36ADC5CF29D533EE00929D3A /* TFYLogTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TFYLogTool.h; sourceTree = "<group>"; };
+		36ADC5D029D533EE00929D3A /* TFYLogTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFYLogTool.m; sourceTree = "<group>"; };
 		36C6669F29AC35DF00DFA49E /* NSObject+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Crash.h"; sourceTree = "<group>"; };
 		36C666A029AC35DF00DFA49E /* NSObject+Crash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Crash.m"; sourceTree = "<group>"; };
 		36C666A229AC423700DFA49E /* NSTimer+Crash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Crash.h"; sourceTree = "<group>"; };
@@ -264,6 +267,8 @@
 			children = (
 				36C6669F29AC35DF00DFA49E /* NSObject+Crash.h */,
 				36C666A029AC35DF00DFA49E /* NSObject+Crash.m */,
+				36ADC5CF29D533EE00929D3A /* TFYLogTool.h */,
+				36ADC5D029D533EE00929D3A /* TFYLogTool.m */,
 			);
 			path = TFYItools;
 			sourceTree = "<group>";
@@ -422,6 +427,7 @@
 				362CBE2329A8ACD300085921 /* PushViewController.m in Sources */,
 				362CBE2129A8ACD300085921 /* PlayerViewController.m in Sources */,
 				362CBDBC29A8A2A100085921 /* main.m in Sources */,
+				36ADC5D129D533EE00929D3A /* TFYLogTool.m in Sources */,
 				36C666C229AC55B900DFA49E /* NSMutableArray+Crash.m in Sources */,
 				36C666B329AC4D7C00DFA49E /* NSMutableAttributedString+Crash.m in Sources */,
 				36C666CE29AC5DC700DFA49E /* NSObject+CrashSelector.m in Sources */,
