@@ -213,36 +213,34 @@ static const char TFYCrashDeallocKVOKey;
         return;
     }
     static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [objectContainer lockObjectSet:^(NSMutableSet *kvoObjectSet) {
-            TFYCrashKVOObjectItem* targetItem = [[TFYCrashKVOObjectItem alloc] init];
-            targetItem.observer = observer;
-            targetItem.whichObject = self;
-            targetItem.keyPath = keyPath;
+    [objectContainer lockObjectSet:^(NSMutableSet *kvoObjectSet) {
+        TFYCrashKVOObjectItem* targetItem = [[TFYCrashKVOObjectItem alloc] init];
+        targetItem.observer = observer;
+        targetItem.whichObject = self;
+        targetItem.keyPath = keyPath;
 
-            TFYCrashKVOObjectItem* resultItem = nil;
-            NSSet *set = [kvoObjectSet copy];
-            for (TFYCrashKVOObjectItem* item in set) {
-                if ([item isEqual:targetItem]) {
-                    resultItem = item;
-                    break;
-                }
+        TFYCrashKVOObjectItem* resultItem = nil;
+        NSSet *set = [kvoObjectSet copy];
+        for (TFYCrashKVOObjectItem* item in set) {
+            if ([item isEqual:targetItem]) {
+                resultItem = item;
+                break;
             }
-            if (resultItem) {
-                @try {
-                    [self crashhookRemoveObserver:observer forKeyPath:keyPath];
-                }@catch (NSException *exception) {
-                }
-                //Clean the reference
-                resultItem.observer = nil;
-                resultItem.whichObject = nil;
-                resultItem.keyPath = nil;
-                [kvoObjectSet removeObject:resultItem];
+        }
+        if (resultItem) {
+            @try {
+                [self crashhookRemoveObserver:observer forKeyPath:keyPath];
+            }@catch (NSException *exception) {
             }
-            [targetItem release];
-            [set release];
-        }];
-    });
+            //Clean the reference
+            resultItem.observer = nil;
+            resultItem.whichObject = nil;
+            resultItem.keyPath = nil;
+            [kvoObjectSet removeObject:resultItem];
+        }
+        [targetItem release];
+        [set release];
+    }];
 }
 
 - (void)crashhookObserveValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
